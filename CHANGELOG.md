@@ -7,5 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.0.1] - 2020-12-29
+
 ### Added
 - Init commit based on [vtex.store-theme@f3026e0](https://github.com/vtex-apps/store-theme/tree/f3026e04801e755ba8656941338c9d54f148bf30).
