@@ -6,6 +6,7 @@
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__.experimentalLazyAssets",
       "flex-layout.row#deals",
+      "my-shelf",
       "rich-text#shelf-title",
       "flex-layout.row#shelf",
       "info-card#home",

@@ -1,0 +1,8 @@
+.clearLink {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.productName {
+  min-height: 2rem;
+}
