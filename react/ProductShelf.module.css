@@ -1,0 +1,33 @@
+.slide {
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+}
+
+.slide--lastVisible {
+  margin-right: 0;
+}
+
+.sliderArrows {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff!important;
+  border-radius: 50%;
+  border: 1px solid #0067c7;
+  color: #0067c7;
+}
+
+.sliderArrows[disabled] {
+  border-color: #a3afbc;
+  color: #a3afbc;
+}
+
+.sliderLeftArrow {
+  padding-left: 4px;
+}
+
+.slideRightArrow {
+  padding-right: 7px;
+}
