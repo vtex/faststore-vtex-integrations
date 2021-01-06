@@ -1,5 +1,11 @@
 {
   "my-shelf": {
     "component": "ProductShelf"
+  },
+  "my-corousel": {
+    "component": "MainBannerCarousel",
+    "content": {
+      "$ref": "app:storeframework.store-theme#/definitions/MainBannerCarousel"
+    }
   }
 }

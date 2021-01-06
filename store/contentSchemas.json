@@ -1,0 +1,34 @@
+{
+  "definitions": {
+    "MainBannerCarousel": {
+      "title": "Main Banner Carousel",
+      "description": "Full width banners with title, subtitle, an image, and a colored background",
+      "type": "object",
+      "properties": {
+        "banners": {
+          "title": "Banners",
+          "type": "array",
+          "items": {
+            "title": "Banner",
+            "type": "object",
+            "properties": {
+              "image": {
+                "$ref": "app:vtex.store-image#/definitions/Image"
+              },
+              "color": {
+                "title": "Color",
+                "type": "string",
+                "enum": ["blue", "yellow", "red"],
+                "enumNames": ["Blue", "Yellow", "Red"],
+                "default": "blue"
+              },
+              "title": { "title": "Title", "type": "string" },
+              "subtitle": { "title": "Subtitle", "type": "string" },
+              "url": { "title": "URL address for link", "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

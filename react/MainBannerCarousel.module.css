@@ -1,0 +1,13 @@
+.sliderArrows {
+  width: 48px;
+  height: 48px;
+  background: #003364!important;
+  opacity: 0.32;
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+.paginationDotsContainer {
+  background-color: #FFFFFF;
+  border-radius: 40px;
+}
