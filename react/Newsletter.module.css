@@ -1,0 +1,45 @@
+.newsletter-cta {
+  font-size: 1.25rem;
+}
+
+.newsletterForm {
+  display: flex;
+  justify-content: center;
+  border: 4px solid rgba(0, 51, 100, 0.25);
+  border-radius: 4px;
+}
+
+.emailInputContainer {
+  flex: auto;
+}
+
+.emailInputContainer :global(.vtex-styleguide-9-x-hideDecorators) {
+  background-color: #fff;
+  border-radius: 0;
+  color: #717786;
+  border: none;
+}
+
+
+.emailInputContainer :global(.vtex-input-prefix__group) {
+  border-radius: 0;
+  border: none;
+}
+
+.formSubmitContainer :global(.vtex-button) {
+  background-color: #fff;
+  color: #0067c7;
+  border: none;
+  border-radius: 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .newsletter-cta {
+    font-size: 2rem;
+  }
+
+  .newsletterForm {
+    max-width: 680px;
+    width: 50%;
+  }
+}
