@@ -4967,17 +4967,17 @@ verror@1.10.0:
   version "2.56.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.minicart@2.56.0/public/@types/vtex.minicart#42d81b3e9e9f1e55473d704c6b6f866c25abecd1"
 
-"vtex.modal-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.modal-layout@0.7.3/public/@types/vtex.modal-layout":
-  version "0.7.3"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.modal-layout@0.7.3/public/@types/vtex.modal-layout#8e9bdd0fd294bb2f7aa0a6aa61daa354ec0cf257"
+"vtex.modal-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.modal-layout@0.9.0/public/@types/vtex.modal-layout":
+  version "0.9.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.modal-layout@0.9.0/public/@types/vtex.modal-layout#18696b6f97ee5d582bf938bbcb8dc63220689022"
 
 "vtex.my-account@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account@1.17.1/public/@types/vtex.my-account":
   version "1.17.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account@1.17.1/public/@types/vtex.my-account#55c674ad6d6f7fa8d58c4382023b21d09de7ef5c"
 
-"vtex.order-placed@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.6.2/public/@types/vtex.order-placed":
-  version "2.6.2"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.6.2/public/@types/vtex.order-placed#f8414f4480bedb561e5b0445a135cbfcad95fe31"
+"vtex.order-placed@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.8.0/public/@types/vtex.order-placed":
+  version "2.8.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.8.0/public/@types/vtex.order-placed#e9938801e7637ea81e2af23fcffd6479553332d8"
 
 "vtex.product-bookmark-interfaces@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-bookmark-interfaces@1.0.1/public/@types/vtex.product-bookmark-interfaces":
   version "1.0.1"
@@ -4987,9 +4987,9 @@ verror@1.10.0:
   version "0.9.7"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.9.7/public/@types/vtex.product-context#4024c589f1ba318e92219a88bf18b4e3774dc85c"
 
-"vtex.product-customizer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-customizer@2.10.1/public/@types/vtex.product-customizer":
-  version "2.10.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-customizer@2.10.1/public/@types/vtex.product-customizer#625355b1f4ac7c86735978e19b4b0d9711635c52"
+"vtex.product-customizer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-customizer@2.10.2/public/@types/vtex.product-customizer":
+  version "2.10.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-customizer@2.10.2/public/@types/vtex.product-customizer#6ef2923a6ddf92c12d14d506cc0615f11b0a262e"
 
 "vtex.product-details@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-details@1.19.10/public/_types/react":
   version "0.0.0"
@@ -5011,17 +5011,17 @@ verror@1.10.0:
   version "0.0.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-kit@1.10.1/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
-"vtex.product-list@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.27.2/public/@types/vtex.product-list":
-  version "0.27.2"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.27.2/public/@types/vtex.product-list#0ce78e0d721a214d86d58fe5b350423a4098f2a5"
+"vtex.product-list@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.28.0/public/@types/vtex.product-list":
+  version "0.28.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-list@0.28.0/public/@types/vtex.product-list#c78d0ec80c957d2da3b9b100a1cdcfb91d180443"
 
 "vtex.product-price@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-price@1.12.0/public/@types/vtex.product-price":
   version "1.12.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-price@1.12.0/public/@types/vtex.product-price#805de3003784bb9878b5893f5460feb9ca45a194"
 
-"vtex.product-quantity@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-quantity@1.5.0/public/@types/vtex.product-quantity":
-  version "1.5.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-quantity@1.5.0/public/@types/vtex.product-quantity#26411d258d1d62bf2fa87a8b7a07aacd7d1388c4"
+"vtex.product-quantity@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-quantity@1.6.0/public/@types/vtex.product-quantity":
+  version "1.6.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-quantity@1.6.0/public/@types/vtex.product-quantity#335060d37638a9ea73a03e51b7f19781977f43f9"
 
 "vtex.product-review-interfaces@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-review-interfaces@1.0.2/public/_types/react":
   version "1.0.2"
@@ -5035,13 +5035,13 @@ verror@1.10.0:
   version "1.0.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-specifications@1.0.1/public/@types/vtex.product-specifications#665bfd1b9f4420f6c988091fa0acf7186b75e10b"
 
-"vtex.product-summary@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-summary@2.68.1/public/@types/vtex.product-summary":
-  version "2.68.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-summary@2.68.1/public/@types/vtex.product-summary#c9385c2bb64f1bd4811b9bc6ccba86de4f2dbd72"
+"vtex.product-summary@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-summary@2.69.0/public/@types/vtex.product-summary":
+  version "2.69.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-summary@2.69.0/public/@types/vtex.product-summary#40106536c8dba9bf35e35751fd3ba723df2d5480"
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.5/public/@types/vtex.render-runtime":
-  version "8.126.5"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.5/public/@types/vtex.render-runtime#f529e960313579c39a9748820885b995f9d6d3e6"
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.9/public/@types/vtex.render-runtime":
+  version "8.126.9"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.126.9/public/@types/vtex.render-runtime#0148c815e43f41fecae5a4bd821670c6a8362d2e"
 
 "vtex.responsive-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.responsive-layout@0.1.2/public/@types/vtex.responsive-layout":
   version "0.1.2"
@@ -5051,9 +5051,9 @@ verror@1.10.0:
   version "0.12.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.12.0/public/@types/vtex.rich-text#56d0486b024aec40ccce96ee1affc03d0119d40f"
 
-"vtex.search-result@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.88.3/public/@types/vtex.search-result":
-  version "3.88.3"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.88.3/public/@types/vtex.search-result#2c8aa2b22608a515c8abcd4ceb336bebbc77f228"
+"vtex.search-result@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.92.1/public/@types/vtex.search-result":
+  version "3.92.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.92.1/public/@types/vtex.search-result#391f6a7e464d9ee8eadd2887c188267d77d5d2db"
 
 "vtex.shelf@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.shelf@1.44.2/public/_types/react":
   version "0.0.0"
@@ -5075,9 +5075,9 @@ verror@1.10.0:
   version "0.3.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.sticky-layout@0.3.4/public/@types/vtex.sticky-layout#5b786d6f9ab0a40e4997c955a75885eee32515ef"
 
-"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.138.2/public/@types/vtex.store-components":
-  version "3.138.2"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.138.2/public/@types/vtex.store-components#683f2f1ecfb86193cb7269d83027f8846970e865"
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.140.1/public/@types/vtex.store-components":
+  version "3.140.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.140.1/public/@types/vtex.store-components#794daf9cee8aac99ea22157effd035b12b3d28ef"
 
 "vtex.store-drawer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-drawer@0.15.0/public/@types/vtex.store-drawer":
   version "0.15.0"
@@ -5103,21 +5103,25 @@ verror@1.10.0:
   version "0.8.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-image@0.8.0/public/@types/vtex.store-image#de3ceed5553e2253d362321b5743894e1483c925"
 
-"vtex.store-link@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.7.1/public/@types/vtex.store-link":
-  version "0.7.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.7.1/public/@types/vtex.store-link#49471b84c53e02a07cd0367c7deb0c8e46683bfe"
+"vtex.store-link@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.7.2/public/@types/vtex.store-link":
+  version "0.7.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.7.2/public/@types/vtex.store-link#85592500cfcd9213ba4e8cbdf4d2d8bdd62e103a"
 
-"vtex.store-video@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-video@1.1.0/public/@types/vtex.store-video":
+"vtex.store-newsletter@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-newsletter@1.1.0/public/@types/vtex.store-newsletter":
   version "1.1.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-video@1.1.0/public/@types/vtex.store-video#8a37f20a686613b60a8a2aa6b6b222a4d80b92a6"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-newsletter@1.1.0/public/@types/vtex.store-newsletter#218f61a5a3bc18018da5b9ca61b52b8e099494e3"
+
+"vtex.store-video@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-video@1.2.0/public/@types/vtex.store-video":
+  version "1.2.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-video@1.2.0/public/@types/vtex.store-video#c947a378dec79fe89136e7530e7e8d58c730de65"
 
 "vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.110.0/public/@types/vtex.store":
   version "2.110.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.110.0/public/@types/vtex.store#b6472e42914bbeaf805b9acf9137fe9302feecb4"
 
-"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.134.1/public/@types/vtex.styleguide":
-  version "9.134.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.134.1/public/@types/vtex.styleguide#7210ed4908f4e6482d2499d71c4cfcc21e3dfd6a"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.135.0/public/@types/vtex.styleguide":
+  version "9.135.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.135.0/public/@types/vtex.styleguide#3884521971a1c0f9b3773231b135e1e4abf9020f"
 
 "vtex.tab-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.tab-layout@0.4.2/public/@types/vtex.tab-layout":
   version "0.4.2"
