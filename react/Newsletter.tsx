@@ -37,4 +37,8 @@ function Newsletter() {
   )
 }
 
+Newsletter.schema = {
+  title: 'Newsletter',
+}
+
 export default Newsletter

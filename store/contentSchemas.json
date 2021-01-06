@@ -44,6 +44,19 @@
           }
         }
       }
+    },
+    "Newsletter": {
+      "title": "Newsletter",
+      "description": "Newsletter subscription form.",
+      "type": "object"
+    },
+    "ProductShelf": {
+      "title": "Shelf",
+      "description": "Product shelf",
+      "properties": {
+        "title": { "type": "string", "title": "Shelf title" },
+        "collection": { "type": "string", "title": "Collection ID" }
+      }
     }
   }
 }

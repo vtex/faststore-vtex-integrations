@@ -57,11 +57,6 @@ function ProductShelf({ title, collection }: Props) {
 
 ProductShelf.schema = {
   title: 'Shelf',
-  description: 'Product shelf',
-  properties: {
-    title: { type: 'string', title: 'Shelf title' },
-    collection: { type: 'string', title: 'Collection ID' },
-  },
 }
 
 export default ProductShelf

@@ -1,6 +1,9 @@
 {
   "my-shelf": {
-    "component": "ProductShelf"
+    "component": "ProductShelf",
+    "content": {
+      "$ref": "#/definitions/ProductShelf"
+    }
   },
   "section-main-banner-carousel": {
     "component": "MainBannerCarousel",
@@ -9,6 +12,9 @@
     }
   },
   "my-newsletter": {
-    "component": "Newsletter"
+    "component": "Newsletter",
+    "content": {
+      "$ref": "#/definitions/Newsletter"
+    }
   }
 }
