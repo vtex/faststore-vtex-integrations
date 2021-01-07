@@ -1,4 +1,33 @@
+.bannerInfoContainer {
+  padding-bottom: 43px;
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 43px;
+}
+
+.bannerTitle {
+  color: #FFFFFF;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.bannerSubtitle {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .bannerButton {
   background-color: #FFFFFF;
   color: #0067C7;
+}
+
+/* Desktop breakpoint */
+@media screen and (min-width: 40em) {
+  .bannerInfoContainer {
+    padding-bottom: 82px;
+    padding-left: 216px;
+    padding-right: 216px;
+    padding-top: 82px;
+  }
 }

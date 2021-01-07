@@ -14,29 +14,32 @@ export interface Props {
   url: string
 }
 
-function Banner({ color, image, url, subtitle, title }: Props) {
+function Banner({ image, url, subtitle, title }: Props) {
   const desktopButtonClasses = 'pt4-m pr6-m pb4-m pl6-m'
-  // const mobileButtonClasses = 'pt3-s pr4-s pb3-s pl4-s'
-
-  // console.log(subtitle, title, color, mobileButtonClasses)
+  const mobileButtonClasses = 'pt3-s pr4-s pb3-s pl4-s'
 
   return (
-    <div className="relative w-100">
-      <div className="absolute pa7">
-        <p>{title}</p>
-        <p>{subtitle}</p>
-        <div>
-          <a
-            className={`link fw7 t-action br1 db ${styles.bannerButton} ${desktopButtonClasses}`}
-            href={url}
-          >
-            Shop Now {color}
-          </a>
-        </div>
+    <>
+      <div
+        className={`absolute flex flex-column h-100 w-100 ${styles.bannerInfoContainer}`}
+      >
+        <span className={`fw5 self-start ${styles.bannerTitle}`}>{title}</span>
+        <span className={`fw5 self-start mb3 ${styles.bannerSubtitle}`}>
+          {subtitle}
+        </span>
+        {url && (
+          <div className="self-start">
+            <a
+              className={`link fw7 t-action br1 db ${styles.bannerButton} ${desktopButtonClasses} ${mobileButtonClasses}`}
+              href={url}
+            >
+              Shop Now
+            </a>
+          </div>
+        )}
       </div>
-
-      <Image {...image} width="100%" height="20.5em" />
-    </div>
+      <Image {...image} width="100%" height="328px" />
+    </>
   )
 }
 

@@ -22,34 +22,10 @@ function renderBanners(banners: Banner[]) {
   ))
 }
 
-const bannersToBeDeleted: Banner[] = [
-  {
-    color: 'red',
-    image: {
-      src:
-        'https://storecomponents.vtexassets.com/arquivos/banner-principal.png',
-    },
-    subtitle: 'Meu Subtitulo 1',
-    title: 'Titulo 1',
-    url: 'https://storeframework.myvtex.com',
-  },
-  {
-    color: 'red',
-    image: {
-      src: 'https://storecomponents.vtexassets.com/arquivos/banner.jpg',
-    },
-    subtitle: 'Meu Subtitulo 2',
-    title: 'Titulo 2',
-    url: 'https://storeframework.myvtex.com',
-  },
-]
-
-function MainBannerCarousel({ banners = bannersToBeDeleted }: Props) {
+function MainBannerCarousel({ banners = [] }: Props) {
   const carouselClasses = useCustomClasses(() => ({
-    sliderArrows: styles.sliderArrows,
-    sliderLeftArrow: styles.sliderLeftArrow,
-    sliderRightArrow: styles.sliderRightArrow,
-    paginationDotsContainer: styles.paginationDotsContainer,
+    sliderArrows: `ma7 ${styles.sliderArrows}`,
+    paginationDotsContainer: `center pa1 ${styles.paginationDotsContainer}`,
   }))
 
   const renderedBanners = useMemo(() => renderBanners(banners), [banners])
