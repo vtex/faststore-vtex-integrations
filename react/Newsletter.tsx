@@ -6,34 +6,49 @@ import {
   FormSubmit,
 } from 'vtex.store-newsletter'
 
+import NewsletterSubscriptionSuccess from './components/NewsletterSubscriptionSuccess'
 import styles from './Newsletter.module.css'
 
 function Newsletter() {
   const formSubmitClasses = useCustomClasses(() => ({
-    formSubmitContainer: styles.formSubmitContainer,
+    formSubmitContainer: {
+      name: styles.formSubmitContainer,
+      applyModifiers: true,
+    },
   }))
 
   const formEmailInputSubmitClasses = useCustomClasses(() => ({
-    emailInputContainer: styles.emailInputContainer,
+    emailInputContainer: {
+      name: styles.emailInputContainer,
+      applyModifiers: true,
+    },
   }))
 
   const newsletterFormClasses = useCustomClasses(() => ({
-    newsletterForm: styles.newsletterForm,
+    newsletterForm: { name: styles.newsletterForm, applyModifiers: true },
   }))
 
   return (
-    <div className="bg-emphasis flex flex-column flex-row-ns justify-between items-center ph5 ph6-ns pt3 pb6 pv6-ns">
-      <p className={`c-on-base--inverted tc fw5 ${styles['newsletter-cta']}`}>
-        Get news and special offers
-      </p>
-      <StoreNewsletter classes={newsletterFormClasses}>
-        <FormEmailInput
-          placeholderText="Email address"
-          classes={formEmailInputSubmitClasses}
-        />
-        <FormSubmit submitButtonLabel="Submit" classes={formSubmitClasses} />
-      </StoreNewsletter>
-    </div>
+    <section className="bg-emphasis flex justify-center">
+      <div
+        className={`flex flex-column flex-row-ns justify-between w-100 ${styles.newsletterSectionContent}`}
+      >
+        <p className={`c-on-base--inverted tc fw5 ${styles['newsletter-cta']}`}>
+          Get news and special offers!
+        </p>
+        <StoreNewsletter
+          classes={newsletterFormClasses}
+          SuccessState={NewsletterSubscriptionSuccess}
+        >
+          <FormEmailInput
+            placeholderText="Email address"
+            classes={formEmailInputSubmitClasses}
+            errorMessage="This address is not valid, please verify"
+          />
+          <FormSubmit submitButtonLabel="Submit" classes={formSubmitClasses} />
+        </StoreNewsletter>
+      </div>
+    </section>
   )
 }
 
