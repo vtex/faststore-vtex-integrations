@@ -5103,10 +5103,6 @@ verror@1.10.0:
   version "0.8.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-image@0.8.0/public/@types/vtex.store-image#de3ceed5553e2253d362321b5743894e1483c925"
 
-"vtex.store-link@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.7.2/public/@types/vtex.store-link":
-  version "0.7.2"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.7.2/public/@types/vtex.store-link#85592500cfcd9213ba4e8cbdf4d2d8bdd62e103a"
-
 "vtex.store-newsletter@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-newsletter@1.1.0/public/@types/vtex.store-newsletter":
   version "1.1.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-newsletter@1.1.0/public/@types/vtex.store-newsletter#218f61a5a3bc18018da5b9ca61b52b8e099494e3"
