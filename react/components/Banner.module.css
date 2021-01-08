@@ -1,3 +1,9 @@
+.bannerContainer {
+  height: 328px;
+  max-height: 328px;
+}
+
+/* Info Container */
 .bannerInfoContainer {
   padding-bottom: 43px;
   padding-left: 29px;
@@ -22,6 +28,21 @@
   color: #0067C7;
 }
 
+.bannerBlue {
+  background-color: #3296F2;
+}
+
+.bannerRed {
+  background-color: #F04F58;
+}
+
+.bannerYellow {
+  background-color: #F0AF08;
+}
+
+/* Image Container */
+.bannerImageContainer {}
+
 /* Desktop breakpoint */
 @media screen and (min-width: 40em) {
   .bannerInfoContainer {
@@ -29,5 +50,9 @@
     padding-left: 216px;
     padding-right: 216px;
     padding-top: 82px;
+  }
+
+  .bannerImageContainer {
+    padding-right: 197px;
   }
 }
