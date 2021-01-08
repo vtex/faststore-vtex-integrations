@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { Image } from 'vtex.store-image'
 import type { ImageProps } from 'vtex.store-image/react/Image'
+import { useIntl, defineMessages } from 'react-intl'
 
 import styles from './Banner.module.css'
 
@@ -13,6 +14,10 @@ export interface Props {
   title: string
   url: string
 }
+
+const messages = defineMessages({
+  shopNow: { id: 'store/store-theme.shopNow' },
+})
 
 function getBannerColorClass(color: Color) {
   switch (color) {
@@ -31,9 +36,11 @@ function getBannerColorClass(color: Color) {
 }
 
 function Banner({ color, image, url, subtitle, title }: Props) {
+  const bannerClassColor = useMemo(() => getBannerColorClass(color), [color])
+  const intl = useIntl()
+
   const desktopButtonClasses = 'pt4-m pr6-m pb4-m pl6-m'
   const mobileButtonClasses = 'pt3-s pr4-s pb3-s pl4-s'
-  const bannerClassColor = useMemo(() => getBannerColorClass(color), [color])
 
   return (
     <div
@@ -48,12 +55,12 @@ function Banner({ color, image, url, subtitle, title }: Props) {
         </span>
 
         {url && (
-          <div className="self-start">
+          <div className="self-start mt4-s mt5-m">
             <a
               className={`link fw7 t-action br1 db ${styles.bannerButton} ${desktopButtonClasses} ${mobileButtonClasses}`}
               href={url}
             >
-              Shop Now
+              {intl.formatMessage(messages.shopNow)}
             </a>
           </div>
         )}
