@@ -2,7 +2,7 @@
   "my-shelf": {
     "component": "ProductShelf"
   },
-  "my-corousel": {
+  "section-main-banner-carousel": {
     "component": "MainBannerCarousel",
     "content": {
       "$ref": "app:storeframework.store-theme#/definitions/MainBannerCarousel"

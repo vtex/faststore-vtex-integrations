@@ -1,11 +1,22 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Image } from 'vtex.store-image'
-import type { ImageProps } from 'vtex.store-image/react/Image'
 import { useIntl, defineMessages } from 'react-intl'
+import { Link } from 'vtex.render-runtime'
+import type { ImageProps } from 'vtex.store-image/react/Image'
 
 import styles from './Banner.module.css'
 
 type Color = 'blue' | 'yellow' | 'red'
+
+const messages = defineMessages({
+  shopNow: { id: 'store/store-theme.shopNow' },
+})
+
+const colorMap: Record<Color, string> = {
+  blue: styles.bannerBlue,
+  yellow: styles.bannerYellow,
+  red: styles.bannerRed,
+}
 
 export interface Props {
   color: Color
@@ -15,28 +26,8 @@ export interface Props {
   url: string
 }
 
-const messages = defineMessages({
-  shopNow: { id: 'store/store-theme.shopNow' },
-})
-
-function getBannerColorClass(color: Color) {
-  switch (color) {
-    case 'blue':
-      return styles.bannerBlue
-
-    case 'red':
-      return styles.bannerRed
-
-    case 'yellow':
-      return styles.bannerYellow
-
-    default:
-      return ''
-  }
-}
-
 function Banner({ color, image, url, subtitle, title }: Props) {
-  const bannerClassColor = useMemo(() => getBannerColorClass(color), [color])
+  const bannerClassColor = colorMap[color]
   const intl = useIntl()
 
   const desktopButtonClasses = 'pt4-m pr6-m pb4-m pl6-m'
@@ -56,12 +47,12 @@ function Banner({ color, image, url, subtitle, title }: Props) {
 
         {url && (
           <div className="self-start mt4-s mt5-m">
-            <a
+            <Link
               className={`link fw7 t-action br1 db ${styles.bannerButton} ${desktopButtonClasses} ${mobileButtonClasses}`}
-              href={url}
+              to={url}
             >
               {intl.formatMessage(messages.shopNow)}
-            </a>
+            </Link>
           </div>
         )}
       </div>
