@@ -47,7 +47,7 @@ function Banner({ color, image, url, subtitle, title }: Props) {
       className={`w-100 flex justify-between ${bannerClassColor} ${styles.bannerContainer}`}
     >
       <div
-        className={`flex flex-column h-100 z-1 ${styles.bannerInfoContainer}`}
+        className={`absolute mh-100 flex flex-column h-100 z-1 ${styles.bannerInfoContainer}`}
       >
         <span className={`fw5 self-start ${styles.bannerTitle}`}>{title}</span>
         <span className={`fw5 self-start mb3 ${styles.bannerSubtitle}`}>
@@ -66,7 +66,7 @@ function Banner({ color, image, url, subtitle, title }: Props) {
         )}
       </div>
 
-      <div className={`absolute-s static-m ${styles.bannerImageContainer}`}>
+      <div className={`absolute right-0-m ${styles.bannerImageContainer}`}>
         <Image {...image} maxWidth="none" />
       </div>
     </div>
