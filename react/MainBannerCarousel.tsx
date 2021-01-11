@@ -18,8 +18,10 @@ interface Props {
 
 function MainBannerCarousel({ banners = [] }: Props) {
   const carouselClasses = useCustomClasses(() => ({
-    sliderArrows: `ma7 ${styles.sliderArrows}`,
-    paginationDotsContainer: `center pa1 ${styles.paginationDotsContainer}`,
+    sliderLayoutContainer: styles.sliderLayoutContainer,
+    sliderArrows: `mh5 mh6-m mh8-l ${styles.sliderArrows}`,
+    paginationDotsContainer: `center pa2 ${styles.paginationDotsContainer}`,
+    paginationDot: styles.paginationDot,
   }))
 
   return (
@@ -27,7 +29,7 @@ function MainBannerCarousel({ banners = [] }: Props) {
       infinite
       classes={carouselClasses}
       itemsPerPage={itensPerPage}
-      showNavigationArrows="desktopOnly"
+      showNavigationArrows="always"
       arrowSize={16}
     >
       {banners.map((bannerProps, index) => (
