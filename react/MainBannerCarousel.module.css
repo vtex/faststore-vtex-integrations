@@ -4,7 +4,7 @@
   color: #FFFFFF;
   width: 48px;
   height: 48px;
-  background: rgba(0, 51, 100, 0.32) !important;
+  background: rgba(0, 0, 0, 0.32) !important;
   border-radius: 50%;
   display: none;
 }
@@ -22,15 +22,15 @@
   width: 8px !important;
 }
 
-@media screen and (min-width: 80em) {
+@media screen and (min-width: 104em) {
   .sliderArrows {
-    /* 4em default value for 80em breakpoint. This calc deals with 80em+ screens */
-    margin: 0 calc(4em + (100% - 80em) / 2)
+    /* 4em is the content margin. This calc deals with 104em+ screens */
+    margin: 0 calc(4em + (100% - 104em) / 2);
   }
 }
 
 @media (hover: hover) { 
   .sliderLayoutContainer:hover .sliderArrows {
-    display: block;
+    display: flex;
   }
 }

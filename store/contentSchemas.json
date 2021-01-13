@@ -13,7 +13,21 @@
             "type": "object",
             "properties": {
               "image": {
-                "$ref": "app:vtex.store-image#/definitions/Image"
+                "title": "Image",
+                "properties": {
+                  "src": {
+                    "title": "admin/editor.image.src.title",
+                    "$ref": "app:vtex.native-types#/definitions/url",
+                    "default": "",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  }
+                }
+              },
+              "imageAlt": {
+                "title": "Image description",
+                "type": "string"
               },
               "color": {
                 "title": "Color",

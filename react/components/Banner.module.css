@@ -1,14 +1,13 @@
 .bannerContainer {
-  height: 328px;
-  max-height: 328px;
+  height: 384px;
+  max-height: 384px;
 }
 
 /* Info Container */
 .bannerInfoContainer {
-  margin-left: 4em;
-  margin-right: 4em;
-  padding-left: 1em;
-  padding-right: 1em; 
+  /* Padding is the arrow width(3em) + distance between content to arrow */
+  padding-left: 4em;
+  padding-right: 4em;
 }
 
 .bannerTitle {
@@ -19,7 +18,7 @@
 .bannerSubtitle {
   color: #FFFFFF;
   font-size: 12pt;
-  margin-bottom: 12px;
+  margin-bottom: 1.25em;
 }
 
 .bannerButtonContainer {
@@ -30,6 +29,14 @@
   background-color: #FFFFFF;
   color: #0067C7;
   font-size: 14pt;
+}
+
+.bannerButton:hover {
+  color: #003364;
+}
+
+.imageElement {
+  object-fit: contain;
 }
 
 .bannerBlue {
@@ -44,98 +51,54 @@
   background-color: #F0AF08;
 }
 
-/* Image Container */
-.bannerImageContainer {
-  margin-right: 4em;
-  padding-right: 1em; 
-}
-
-/* -s */
-@media screen and (min-width: 20em) {
-  .bannerInfoContainer {
-    /* 4em from arrows size and margin */
-    margin-left: 4em;
-    margin-right: 4em;
-    padding-left: 1em;
-    padding-right: 1em; 
-  }
-
-  .bannerImageContainer {
-    /* 4em from arrows size and margin */
-    margin-right: 4em;
-    padding-right: 1em; 
-  }
-}
 
 /* -ns breakpoints */
 @media screen and (min-width: 40em) {
-  .bannerInfoContainer {
-    /* 4.5em from arrows size and margin */
-    margin-left: 4.5em;
-    margin-right: 4.5em;
-    padding-left: 2em;
-    padding-right: 2em; 
+  .bannerContainer {
+    height: 328px;
+    max-height: 328px;
   }
 
-  .bannerImageContainer {
-    /* 4.5em from arrows size and margin */
-    margin-right: 4.5em;
-    padding-right: 2em;
+  .bannerInfoContainer {
+    /* Padding is the arrow width(3em) + distance between content to arrow */
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  .bannerSubtitle {
+    margin-bottom: 2em;
   }
 }
 
 @media screen and (min-width: 64em) {
   .bannerInfoContainer {
-    /* 6em from arrows size and margin */
-    margin-left: 6em;
-    margin-right: 6em;
-    padding-left: 4em;
-    padding-right: 4em; 
-  }
-
-  .bannerImageContainer {
-    /* 6em from arrows size and margin */
-    margin-right: 6em;
-    padding-right: 4em;
+    /* Padding is the arrow width(3em) + distance between content to arrow */
+    padding-left: 7em;
+    padding-right: 7em;
   }
 }
 
 @media screen and (min-width: 80em) {
-  /*  8em padd */
   .bannerInfoContainer {
-    /* 7em from arrows size and margin. calc to add margin till the left and right arrow */
-    margin-left: calc(7em + (100% - 80em) / 2);
-    margin-right: calc(7em + (100% - 80em) / 2);
-    padding-left: 8em;
-    padding-right: 8em;
+    /* Padding is the arrow width(3em) + distance between content to arrow */
+    padding-left: 11em;
+    padding-right: 11em;
   }
+}
 
-  .bannerImageContainer {
-    /* 7em from arrows size and margin. calc to add margin till the left and right arrow */
-    margin-right: calc(7em + (100% - 80em) / 2);
-    padding-right: 8em;
+@media screen and (min-width: 104em) {
+  .bannerInfoContainer {
+    /* Margin is the content margins */
+    margin-left: calc(4em + (100% - 104em) / 2);
+    margin-right: calc(4em + (100% - 104em) / 2);
   }
 }
 
 /* non touch breakpoints */
 @media (hover: none) {
   .bannerInfoContainer {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .bannerImageContainer {
-    margin-right: 0;
-  }
-}
-
-@media (hover: none) and (min-width: 80em) {
-  .bannerInfoContainer {
-    margin-left: calc((100% - 80em) / 2);
-    margin-right: calc((100% - 80em) / 2);
-  }
-
-  .bannerImageContainer {
-    margin-right: calc((100% - 80em) / 2);
+    /* remove arrow width margins and distance between content to arrow */
+    padding-left: 0;
+    padding-right: 0;
   }
 }

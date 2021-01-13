@@ -1,7 +1,8 @@
 import React from 'react'
 import { Image } from 'vtex.store-image'
-import { useIntl, defineMessages } from 'react-intl'
 import { Link } from 'vtex.render-runtime'
+import { useCustomClasses } from 'vtex.css-handles'
+import { useIntl, defineMessages } from 'react-intl'
 import type { ImageProps } from 'vtex.store-image/react/Image'
 
 import styles from './Banner.module.css'
@@ -18,17 +19,23 @@ const colorMap: Record<Color, string> = {
   red: styles.bannerRed,
 }
 
+export const contentMarginClasses = `mh5 mh6-m mh8-l mh9-xl`
+
 export interface Props {
   color: Color
   image: ImageProps
+  imageAlt: string
   subtitle: string
   title: string
   url: string
 }
 
-function Banner({ color, image, url, subtitle, title }: Props) {
-  const bannerClassColor = colorMap[color]
+function Banner({ color, image, imageAlt, url, subtitle, title }: Props) {
   const intl = useIntl()
+  const bannerClassColor = colorMap[color]
+  const imageClasses = useCustomClasses(() => ({
+    imageElement: styles.imageElement,
+  }))
 
   const desktopButtonClasses = 'pt4-m pr7-m pb4-m pl7-m'
   const mobileButtonClasses = 'pt3 pr4 pb3 pl4'
@@ -37,31 +44,41 @@ function Banner({ color, image, url, subtitle, title }: Props) {
     <div
       className={`relative w-100 flex justify-between ${bannerClassColor} ${styles.bannerContainer}`}
     >
-      <div
-        className={`absolute mh-100 flex flex-column justify-center-m h-100 z-1 pt8 pt0-m ${styles.bannerInfoContainer}`}
-      >
-        <span className={`fw5 self-start mb3 mb4-m ${styles.bannerTitle}`}>
-          {title}
-        </span>
-        <span className={`fw5 self-start ${styles.bannerSubtitle}`}>
-          {subtitle}
-        </span>
+      <Link to={url} className="w-100">
+        <div
+          className={`absolute mh-100 flex flex-column justify-center-m h-100 z-1 pt8 pt0-m ${contentMarginClasses} ${styles.bannerInfoContainer}`}
+        >
+          <span className={`fw5 self-start mb3 mb4-m ${styles.bannerTitle}`}>
+            {title}
+          </span>
+          <span className={`fw5 self-start ${styles.bannerSubtitle}`}>
+            {subtitle}
+          </span>
 
-        {url && (
-          <div className="self-start">
-            <Link
-              className={`link fw7 t-action br1 db ${styles.bannerButton} ${desktopButtonClasses} ${mobileButtonClasses}`}
-              to={url}
-            >
-              {intl.formatMessage(messages.shopNow)}
-            </Link>
+          {url && (
+            <div className="self-start mb5-m">
+              <button
+                className={`link fw7 t-action br2 db bn pointer ${styles.bannerButton} ${desktopButtonClasses} ${mobileButtonClasses}`}
+              >
+                {intl.formatMessage(messages.shopNow)}
+              </button>
+            </div>
+          )}
+        </div>
+
+        <div className="w-100 h-100">
+          <div
+            className={`h-100 flex flex-column flex-row-l justify-end ${contentMarginClasses} ${styles.bannerInfoContainer}`}
+          >
+            <Image
+              src={image.src}
+              alt={imageAlt}
+              classes={imageClasses}
+              maxHeight="100%"
+            />
           </div>
-        )}
-      </div>
-
-      <div className={`absolute right-0-m ${styles.bannerImageContainer}`}>
-        <Image {...image} maxWidth="none" />
-      </div>
+        </div>
+      </Link>
     </div>
   )
 }

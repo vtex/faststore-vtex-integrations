@@ -2,15 +2,9 @@ import React from 'react'
 import { SliderLayout } from 'vtex.slider-layout'
 import { useCustomClasses } from 'vtex.css-handles'
 
-import BannerComponent from './components/Banner'
+import BannerComponent, { contentMarginClasses } from './components/Banner'
 import type { Props as Banner } from './components/Banner'
 import styles from './MainBannerCarousel.module.css'
-
-const itensPerPage = {
-  desktop: 1,
-  tablet: 1,
-  phone: 1,
-}
 
 interface Props {
   banners: Banner[]
@@ -19,7 +13,7 @@ interface Props {
 function MainBannerCarousel({ banners = [] }: Props) {
   const carouselClasses = useCustomClasses(() => ({
     sliderLayoutContainer: styles.sliderLayoutContainer,
-    sliderArrows: `mh5 mh6-m mh8-l ${styles.sliderArrows}`,
+    sliderArrows: `${contentMarginClasses} ${styles.sliderArrows}`,
     paginationDotsContainer: `center pa2 ${styles.paginationDotsContainer}`,
     paginationDot: styles.paginationDot,
   }))
@@ -28,7 +22,7 @@ function MainBannerCarousel({ banners = [] }: Props) {
     <SliderLayout
       infinite
       classes={carouselClasses}
-      itemsPerPage={itensPerPage}
+      itemsPerPage={1}
       showNavigationArrows="always"
       arrowSize={16}
     >
