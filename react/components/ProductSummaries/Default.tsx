@@ -10,13 +10,13 @@ import { ListPrice, SellingPrice } from 'vtex.product-price'
 import type { ProductTypes } from 'vtex.product-context'
 import { useCustomClasses } from 'vtex.css-handles'
 
-import styles from './ProductSummary.module.css'
+import styles from './Default.module.css'
 
 interface Props {
   product: ProductTypes.Product
 }
 
-function ProductSummary({ product }: Props) {
+function ProductSummaryDefault({ product }: Props) {
   const summaryClasses = useCustomClasses(() => ({
     clearLink: [styles.clearLink, 'tl'],
   }))
@@ -77,4 +77,4 @@ function ProductSummary({ product }: Props) {
   )
 }
 
-export default ProductSummary
+export default ProductSummaryDefault

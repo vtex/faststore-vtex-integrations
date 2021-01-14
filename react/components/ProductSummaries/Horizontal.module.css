@@ -1,0 +1,17 @@
+.clearLink {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.element {
+  padding: 0;
+}
+
+.container {
+  max-width: inherit !important;
+  min-height: 150px;
+}
+
+.imageWrapper {
+  width: inherit;
+}

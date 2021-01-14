@@ -1,5 +1,8 @@
 {
-  "my-shelf": {
+  "section-shelf": {
     "component": "ProductShelf"
+  },
+  "section-product-grid": {
+    "component": "ProductGrid"
   }
 }

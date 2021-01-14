@@ -5,17 +5,26 @@ import { IconCaret } from 'vtex.store-icons'
 interface Props {
   title: string
   seeMoreLink: string
+  line?: boolean
 }
 
-function ShelfTitle({ title = 'Popular picks', seeMoreLink }: Props) {
+function ShelfTitle({
+  title = 'Popular picks',
+  seeMoreLink,
+  line = true,
+}: Props) {
   return (
     <>
-      <div className="flex justify-between items-baseline pv6 mb6 bb b--muted-4">
+      <div
+        className={`flex justify-between items-baseline pv6 ${
+          line ? 'bb b--muted-4 mb6' : ''
+        }`}
+      >
         <h3 className="t-heading-3 c-on-base mv0">{title}</h3>
 
         <Link
           to={seeMoreLink}
-          className="f6 b c-link hover-c-link visited-c-link active-c-link no-underline"
+          className="f5 b c-link hover-c-link visited-c-link active-c-link no-underline"
         >
           See more <IconCaret orientation="right" thin size={11} />
         </Link>
