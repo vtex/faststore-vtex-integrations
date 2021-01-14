@@ -39,7 +39,7 @@ function ProductSummaryHorizontal({ product }: Props) {
   return (
     <ProductSummaryCustom product={product} classes={summaryClasses}>
       <div className="flex flex-row">
-        <div className="relative w5 mr6">
+        <div className="relative w4 mr6">
           <ProductSummaryImage
             aspectRatio="1:1"
             maxHeight="120px"
