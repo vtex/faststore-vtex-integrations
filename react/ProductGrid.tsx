@@ -3,7 +3,7 @@ import { ProductSummaryList } from 'vtex.product-summary'
 
 import Container from './components/Container'
 import ProductSummaryHorizontal from './components/ProductSummaries/Horizontal'
-import ProductDisplayGrid from './components/ShelfModes/ProductDisplayGrid'
+import ProductDisplayGrid from './components/ProductDisplays/Grid'
 import ShelfTitle from './components/ShelfTitle'
 import styles from './ProductGrid.module.css'
 

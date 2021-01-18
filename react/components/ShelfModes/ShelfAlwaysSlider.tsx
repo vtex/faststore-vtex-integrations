@@ -3,7 +3,7 @@ import { ProductSummaryList } from 'vtex.product-summary'
 
 import ProductSummary from '../ProductSummaries/Default'
 import ShelfTitle from '../ShelfTitle'
-import ProductDisplaySlider from './ProductDisplaySlider'
+import ProductDisplaySlider from '../ProductDisplays/Slider'
 import Container from '../Container'
 
 interface Props {

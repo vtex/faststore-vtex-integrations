@@ -2,7 +2,7 @@ import React from 'react'
 import { useCustomClasses } from 'vtex.css-handles'
 import { SliderLayout } from 'vtex.slider-layout'
 
-import styles from './ProductDisplaySlider.module.css'
+import styles from './Slider.module.css'
 
 const sliderLayoutItemsPerPage = {
   desktop: 6,

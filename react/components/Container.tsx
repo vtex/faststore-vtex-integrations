@@ -7,7 +7,9 @@ interface Props {
 }
 
 function Container({ children, className }: Props) {
-  return <div className={`mw9 center ph3 ph5-ns ${className}`}>{children}</div>
+  return (
+    <div className={`mw9 center mv4 ph3 ph5-ns ${className}`}>{children}</div>
+  )
 }
 
 export default Container
