@@ -1,12 +1,11 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#demo",
+      "section-main-banner-carousel",
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__.experimentalLazyAssets",
       "flex-layout.row#deals",
-      "section-main-banner-carousel",
       "my-shelf",
       "rich-text#shelf-title",
       "flex-layout.row#shelf",

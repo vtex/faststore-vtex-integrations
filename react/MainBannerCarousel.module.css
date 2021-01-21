@@ -1,12 +1,9 @@
-.sliderLayoutContainer {}
-
 .sliderArrows {
   color: #FFFFFF;
   width: 48px;
   height: 48px;
   background: rgba(0, 0, 0, 0.32) !important;
   border-radius: 50%;
-  display: none;
 }
 
 .paginationDotsContainer {
@@ -29,8 +26,8 @@
   }
 }
 
-@media (hover: hover) { 
-  .sliderLayoutContainer:hover .sliderArrows {
-    display: flex;
+@media (hover: none) { 
+  .sliderArrows {
+    display: none;
   }
 }

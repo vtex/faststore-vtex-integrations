@@ -12,21 +12,24 @@
             "title": "Banner",
             "type": "object",
             "properties": {
-              "image": {
-                "title": "Image",
-                "properties": {
-                  "src": {
-                    "title": "admin/editor.image.src.title",
-                    "$ref": "app:vtex.native-types#/definitions/url",
-                    "default": "",
-                    "widget": {
-                      "ui:widget": "image-uploader"
-                    }
-                  }
+              "desktopImage": {
+                "title": "Desktop image",
+                "$ref": "app:vtex.native-types#/definitions/url",
+                "default": "",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImage": {
+                "title": "Mobile image",
+                "$ref": "app:vtex.native-types#/definitions/url",
+                "default": "",
+                "widget": {
+                  "ui:widget": "image-uploader"
                 }
               },
               "imageAlt": {
-                "title": "Image description",
+                "title": "Alt description",
                 "type": "string"
               },
               "color": {
@@ -36,8 +39,6 @@
                 "enumNames": ["Blue", "Yellow", "Red"],
                 "default": "blue"
               },
-              "title": { "title": "Title", "type": "string" },
-              "subtitle": { "title": "Subtitle", "type": "string" },
               "url": { "title": "URL address for link", "type": "string" }
             }
           }

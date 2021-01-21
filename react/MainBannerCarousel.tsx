@@ -2,7 +2,7 @@ import React from 'react'
 import { SliderLayout } from 'vtex.slider-layout'
 import { useCustomClasses } from 'vtex.css-handles'
 
-import BannerComponent, { contentMarginClasses } from './components/Banner'
+import BannerComponent from './components/Banner'
 import type { Props as Banner } from './components/Banner'
 import styles from './MainBannerCarousel.module.css'
 
@@ -10,9 +10,10 @@ interface Props {
   banners: Banner[]
 }
 
+const contentMarginClasses = `mh5 mh6-m mh8-l mh9-xl`
+
 function MainBannerCarousel({ banners = [] }: Props) {
   const carouselClasses = useCustomClasses(() => ({
-    sliderLayoutContainer: styles.sliderLayoutContainer,
     sliderArrows: `${contentMarginClasses} ${styles.sliderArrows}`,
     paginationDotsContainer: `center pa2 ${styles.paginationDotsContainer}`,
     paginationDot: styles.paginationDot,
