@@ -1,11 +1,20 @@
 {
-  "my-shelf": {
-    "component": "ProductShelf"
+  "section-shelf": {
+    "component": "ProductShelf",
+    "content": {
+      "$ref": "#/definitions/ProductShelf"
+    }
   },
   "section-main-banner-carousel": {
     "component": "MainBannerCarousel",
     "content": {
       "$ref": "app:storeframework.store-theme#/definitions/MainBannerCarousel"
+    }
+  },
+  "section-newsletter": {
+    "component": "Newsletter",
+    "content": {
+      "$ref": "#/definitions/Newsletter"
     }
   }
 }
