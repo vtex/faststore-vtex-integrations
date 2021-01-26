@@ -1,0 +1,32 @@
+.bannerContainer {
+  max-height: 327px;
+}
+
+.imageElement {
+  object-fit: none;
+  max-height: 327px;
+}
+
+.bannerBlue {
+  background-color: #3296F2;
+}
+
+.bannerRed {
+  background-color: #F04F58;
+}
+
+.bannerYellow {
+  background-color: #F0AF08;
+}
+
+/* -ns breakpoints */
+@media screen and (min-width: 40em) {
+  .bannerContainer {
+    height: 327px;
+    max-height: 327px;
+  }
+
+  .imageElement {
+    object-fit: contain;
+  }
+}
