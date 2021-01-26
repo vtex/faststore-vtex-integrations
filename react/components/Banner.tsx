@@ -2,7 +2,6 @@ import React from 'react'
 import { Image } from 'vtex.store-image'
 import { Link, useRuntime } from 'vtex.render-runtime'
 import { useCustomClasses } from 'vtex.css-handles'
-import type { ImageProps } from 'vtex.store-image/react/Image'
 
 import styles from './Banner.module.css'
 
@@ -16,8 +15,8 @@ const colorMap: Record<Color, string> = {
 
 export interface Props {
   color: Color
-  desktopImage: ImageProps
-  mobileImage: ImageProps
+  desktopImage: string
+  mobileImage: string
   imageAlt: string
   url: string
 }
@@ -32,8 +31,7 @@ function Banner({ color, desktopImage, mobileImage, imageAlt, url }: Props) {
   } = useRuntime()
 
   const bannerClassColor = colorMap[color]
-  const imageSrc =
-    isMobile && type === 'phone' ? mobileImage.src : desktopImage?.src
+  const imageSrc = isMobile && type === 'phone' ? mobileImage : desktopImage
 
   return (
     <div className={`w-100 ${bannerClassColor}`}>
