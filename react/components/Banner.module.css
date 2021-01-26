@@ -1,10 +1,10 @@
 .bannerContainer {
-  height: 384px;
-  max-height: 384px;
+  max-height: 327px;
 }
 
 .imageElement {
-  object-fit: fill;
+  object-fit: none;
+  max-height: 327px;
 }
 
 .bannerBlue {
@@ -19,11 +19,14 @@
   background-color: #F0AF08;
 }
 
-
 /* -ns breakpoints */
 @media screen and (min-width: 40em) {
   .bannerContainer {
-    height: 328px;
-    max-height: 328px;
+    height: 327px;
+    max-height: 327px;
+  }
+
+  .imageElement {
+    object-fit: contain;
   }
 }
