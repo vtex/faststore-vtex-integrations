@@ -88,7 +88,7 @@
   border-top-right-radius: 4px;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 40em) {
   .newsletter-cta {
     font-size: 2rem;
     margin-top: 2rem;
@@ -124,7 +124,7 @@
   }
 }
 
-@media only screen and (min-width: 640px) and (max-width: 1024px) {
+@media only screen and (min-width: 40em) and (max-width: 64em) {
   .newsletterSectionContent {
     min-width: 592px;
     max-width: 928px;
@@ -139,7 +139,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 64em) and (max-width: 80em) {
   .newsletterSectionContent {
     min-width: 976px;
     max-width: 1152px;
@@ -154,7 +154,7 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 80em) {
   .newsletterSectionContent {
     min-width: 1152px;
     max-width: 1536px;
