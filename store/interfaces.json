@@ -1,5 +1,5 @@
 {
-  "my-shelf": {
+  "section-shelf": {
     "component": "ProductShelf",
     "content": {
       "$ref": "#/definitions/ProductShelf"
@@ -11,7 +11,7 @@
       "$ref": "app:storeframework.store-theme#/definitions/MainBannerCarousel"
     }
   },
-  "my-newsletter": {
+  "section-newsletter": {
     "component": "Newsletter",
     "content": {
       "$ref": "#/definitions/Newsletter"
