@@ -5,6 +5,7 @@ import { SliderLayout } from 'vtex.slider-layout'
 
 import ProductSummary from './components/ProductSummary'
 import ShelfTitle from './components/ShelfTitle'
+import Container, { contentMarginClasses } from './components/Container'
 import styles from './ProductShelf.module.css'
 
 const sliderLayoutItemsPerPage = {
@@ -27,13 +28,11 @@ interface Props {
 function ProductShelf({ title, collection }: Props) {
   const shelfClasses = useCustomClasses(() => ({
     slide: { name: styles.slide, applyModifiers: true },
-    sliderArrows: styles.sliderArrows,
-    sliderLeftArrow: styles.sliderLeftArrow,
-    sliderRightArrow: styles.sliderRightArrow,
+    sliderArrows: `${contentMarginClasses} ${styles.sliderArrows}`,
   }))
 
   return (
-    <div className="mw9 center ph3 ph5-ns">
+    <Container>
       <ShelfTitle title={title} seeMoreLink="/" />
 
       <ProductSummaryList
@@ -51,7 +50,7 @@ function ProductShelf({ title, collection }: Props) {
           arrowSize={11}
         />
       </ProductSummaryList>
-    </div>
+    </Container>
   )
 }
 

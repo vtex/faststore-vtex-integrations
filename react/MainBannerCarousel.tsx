@@ -5,12 +5,11 @@ import { useCustomClasses } from 'vtex.css-handles'
 import BannerComponent from './components/Banner'
 import type { Props as Banner } from './components/Banner'
 import styles from './MainBannerCarousel.module.css'
+import { contentMarginClasses } from './components/Container'
 
 interface Props {
   banners: Banner[]
 }
-
-const contentMarginClasses = `mh5 mh6-m mh8-l mh9-xl`
 
 function MainBannerCarousel({ banners = [] }: Props) {
   const carouselClasses = useCustomClasses(() => ({

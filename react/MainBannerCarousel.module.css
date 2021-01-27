@@ -19,13 +19,6 @@
   width: 8px !important;
 }
 
-@media screen and (min-width: 104em) {
-  .sliderArrows {
-    /* 4em is the content margin. This calc deals with 104em+ screens */
-    margin: 0 calc(4em + (100% - 104em) / 2);
-  }
-}
-
 @media (hover: none) { 
   .sliderArrows {
     display: none;
