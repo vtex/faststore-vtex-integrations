@@ -64,7 +64,8 @@
     "vtex.responsive-layout": "0.x",
     "vtex.css-handles": "1.x",
     "vtex.product-context": "0.x",
-    "vtex.store-newsletter": "1.x"
+    "vtex.store-newsletter": "1.x",
+    "vtex.session-client": "0.x"
   },
   "peerDependencies": {
     "vtex.reviews-and-ratings": "2.x"

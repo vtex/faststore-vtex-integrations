@@ -1,36 +1,20 @@
 import React from 'react'
-import { SliderLayout } from 'vtex.slider-layout'
-import { useCustomClasses } from 'vtex.css-handles'
 
-import BannerComponent from './components/Banner'
-import type { Props as Banner } from './components/Banner'
-import styles from './MainBannerCarousel.module.css'
+import MyFullSession from './components/session/MyFullSession'
+import MyLazyFullSession from './components/session/MyLazyFullSession'
+import MyRenderSession from './components/session/MyRenderSession'
+import MyUpdateSession from './components/session/MyUpdateSession'
+import MyUpdateSessionInline from './components/session/MyUpdateSessionInline'
 
-interface Props {
-  banners: Banner[]
-}
-
-const contentMarginClasses = `mh5 mh6-m mh8-l mh9-xl`
-
-function MainBannerCarousel({ banners = [] }: Props) {
-  const carouselClasses = useCustomClasses(() => ({
-    sliderArrows: `${contentMarginClasses} ${styles.sliderArrows}`,
-    paginationDotsContainer: `center pa2 ${styles.paginationDotsContainer}`,
-    paginationDot: styles.paginationDot,
-  }))
-
+function MainBannerCarousel() {
   return (
-    <SliderLayout
-      infinite
-      classes={carouselClasses}
-      itemsPerPage={1}
-      showNavigationArrows="always"
-      arrowSize={16}
-    >
-      {banners.map((bannerProps, index) => (
-        <BannerComponent key={index} {...bannerProps} />
-      ))}
-    </SliderLayout>
+    <>
+      <MyFullSession />
+      <MyLazyFullSession />
+      <MyRenderSession />
+      <MyUpdateSession />
+      <MyUpdateSessionInline />
+    </>
   )
 }
 
