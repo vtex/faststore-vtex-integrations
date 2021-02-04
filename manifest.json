@@ -1,7 +1,7 @@
 {
   "vendor": "storeframework",
   "name": "store-theme",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -12,6 +12,10 @@
   },
   "scripts": {
     "postreleasy": "vtex publish --verbose"
+  },
+  "billingOptions": {
+    "type": "free",
+    "availableCountries": ["*"]
   },
   "dependencies": {
     "vtex.store": "2.x",
