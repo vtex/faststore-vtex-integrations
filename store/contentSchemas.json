@@ -57,6 +57,35 @@
         "title": { "type": "string", "title": "Shelf title" },
         "collection": { "type": "string", "title": "Collection ID" }
       }
+    },
+    "ShopByCategory": {
+      "title": "Shop by Category",
+      "description": "Cards that show a transparent image and link to a category",
+      "type": "object",
+      "properties": {
+        "categories": {
+          "title": "Categories",
+          "type": "array",
+          "items": {
+            "title": "Category",
+            "type": "object",
+            "properties": {
+              "image": {
+                "title": "Featured product image",
+                "description": "Please use a PNG image with a transparent background",
+                "type": "string",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "category": {
+                "title": "Category ID",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

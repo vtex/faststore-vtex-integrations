@@ -1,0 +1,23 @@
+.flexGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.categoryImage {
+  mix-blend-mode: darken;
+}
+
+@media (max-width: 60em) {
+  .flexGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 40em) {
+  .flexGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}

@@ -6,6 +6,7 @@
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__.experimentalLazyAssets",
       "flex-layout.row#deals",
+      "section-shop-by-category#home",
       "section-shelf",
       "rich-text#shelf-title",
       "flex-layout.row#shelf",
@@ -14,6 +15,36 @@
       "rich-text#link",
       "section-newsletter"
     ]
+  },
+  "section-shop-by-category#home": {
+    "props": {
+      "categories": [
+        {
+          "image": "https://storeframework.vtexassets.com/assets/vtex.file-manager-graphql/images/c4d3ca2c-992b-4cdb-a83a-3c295ae754c9___730e3651be0344dcf8148adc49147145.png",
+          "category": "9281"
+        },
+        {
+          "image": "https://storeframework.vtexassets.com/assets/vtex.file-manager-graphql/images/2b6c2bd7-22f5-4556-aad6-9e405d7f5487___1e5fc487727135765445caa83c677f67.png",
+          "category": "9282"
+        },
+        {
+          "image": "https://storeframework.vtexassets.com/assets/vtex.file-manager-graphql/images/aad093f3-e1e5-4095-8bca-7c9df2d6bfc2___3b8e71bb317cb78501a9457da523670e.png",
+          "category": "9283"
+        },
+        {
+          "image": "https://storeframework.vtexassets.com/assets/vtex.file-manager-graphql/images/95839919-d65e-4046-a29a-26395726d371___8bf5dffb427b7bb21ac7a162be597c06.png",
+          "category": "9284"
+        },
+        {
+          "image": "https://storeframework.vtexassets.com/assets/vtex.file-manager-graphql/images/a87875a4-d16b-4511-8949-82024650b7d9___04ecdbff73339e4aebfbf2ef8c5a6de8.png",
+          "category": "9285"
+        },
+        {
+          "image": "https://storeframework.vtexassets.com/assets/vtex.file-manager-graphql/images/461ff0d0-2ddd-4cf3-8175-a063eb214b93___7af473f59be235a046525ca834851ec9.png",
+          "category": "9286"
+        }
+      ]
+    }
   },
 
   "list-context.image-list#demo": {

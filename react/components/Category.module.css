@@ -1,0 +1,25 @@
+.categoryContainer {
+  background-color: #F3F9FF;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  text-decoration: inherit;
+  color: #3F3F40;
+}
+
+.categoryContainerLink:hover {
+  color: #0067C7;
+  border-color: #0067C7;
+}
+
+.categoryName {
+  font-size: 1.125em;
+}
+
+@media (max-width: 40em) {
+  .categoryName {
+    font-size: 1em;
+    letter-spacing: -0.008em;
+  }
+}
