@@ -2,7 +2,7 @@
   "section-shelf": {
     "component": "ProductShelf",
     "content": {
-      "$ref": "#/definitions/ProductShelf"
+      "$ref": "app:storeframework.store-theme#/definitions/ProductShelf"
     }
   },
   "section-main-banner-carousel": {
@@ -14,13 +14,13 @@
   "section-newsletter": {
     "component": "Newsletter",
     "content": {
-      "$ref": "#/definitions/Newsletter"
+      "$ref": "app:storeframework.store-theme#/definitions/Newsletter"
     }
   },
   "section-shop-by-category": {
     "component": "ShopByCategory",
     "content": {
-      "$ref": "#/definitions/ShopByCategory"
+      "$ref": "app:storeframework.store-theme#/definitions/ShopByCategory"
     }
   }
 }

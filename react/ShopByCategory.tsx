@@ -10,9 +10,9 @@ const CSS_HANDLES = ['categoryImage', 'categoryImageLink'] as const
 
 export interface CategoryType {
   /** Category image */
-  image?: string
+  categoryImage?: string
   /** Category ID */
-  category?: string
+  categoryId?: string
 }
 
 type ShopByCategoryProps = {
@@ -29,25 +29,23 @@ function ShopByCategory({ categories, classes }: ShopByCategoryProps) {
 
   return (
     <Container>
-      <div className="flex flex-column">
-        <h3 className="t-heading-4 self-center self-start-ns c-on-base mv5">
-          Shop by category
-        </h3>
-        <div className={`${styles.flexGrid}`}>
-          {categories.map((category) => {
-            if (!category.category) {
-              return null
-            }
+      <h3 className="t-heading-4 self-center self-start-ns c-on-base mv5">
+        Shop by category
+      </h3>
+      <div className={`${styles.grid}`}>
+        {categories.map((category) => {
+          if (!category.categoryId) {
+            return null
+          }
 
-            return (
-              <Category
-                category={category}
-                classes={classesOverride}
-                key={category.category}
-              />
-            )
-          })}
-        </div>
+          return (
+            <Category
+              category={category}
+              classes={classesOverride}
+              key={category.categoryId}
+            />
+          )
+        })}
       </div>
     </Container>
   )

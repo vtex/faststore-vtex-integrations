@@ -1,4 +1,4 @@
-.flexGrid {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
@@ -9,14 +9,14 @@
 }
 
 @media (max-width: 60em) {
-  .flexGrid {
+  .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 
 @media (max-width: 40em) {
-  .flexGrid {
+  .grid {
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
   }

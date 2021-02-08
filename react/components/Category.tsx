@@ -1,19 +1,17 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { useQuery } from 'react-apollo'
 import ContentLoader from 'react-content-loader'
 import { Image } from 'vtex.store-image'
 import type { CssHandlesTypes } from 'vtex.css-handles'
 import { Link } from 'vtex.render-runtime'
+import type { Category as CategoryGraphqlType } from 'vtex.store-graphql'
 
 import type { CategoryType } from '../ShopByCategory'
 import styles from './Category.module.css'
 import categoryQuery from '../graphql/categoryQuery.gql'
 
 interface CategoryQueryResult {
-  category: {
-    name: string
-    href: string
-  }
+  category: Pick<CategoryGraphqlType, 'name' | 'href'>
 }
 
 interface CategoriesQueryVariables {
@@ -26,15 +24,11 @@ type CategoryProps = {
 }
 
 function Category({ category, classes }: CategoryProps) {
-  const queryVariables = useMemo(() => ({ id: Number(category.category) }), [
-    category.category,
-  ])
-
-  const { data, error } = useQuery<
+  const { data, loading, error } = useQuery<
     CategoryQueryResult,
     CategoriesQueryVariables
   >(categoryQuery, {
-    variables: queryVariables,
+    variables: { id: Number(category.categoryId) },
     ssr: false,
   })
 
@@ -42,18 +36,16 @@ function Category({ category, classes }: CategoryProps) {
     return null
   }
 
-  const wrapperClassname = `${styles.categoryContainer} flex flex-column items-center justify-center pv6 pv7-ns w-100 h-100`
-
   const CategoryContent = () => (
     <>
       <Image
-        key={category.category}
-        src={category.image ?? ''}
+        key={category.categoryId}
+        src={category.categoryImage ?? ''}
         width={80}
         height={80}
         classes={classes}
       />
-      {!data?.category.name ? (
+      {loading ? (
         <ContentLoader
           width={120}
           height={16}
@@ -69,13 +61,15 @@ function Category({ category, classes }: CategoryProps) {
         <span
           className={`${styles.categoryName} mt5 mt6-ns tc overflow-hidden w-100`}
         >
-          {data.category.name}
+          {data?.category.name}
         </span>
       )}
     </>
   )
 
-  if (!data) {
+  const wrapperClassname = `${styles.categoryContainer} flex flex-column items-center justify-center pv6 pv7-ns w-100 h-100`
+
+  if (loading) {
     return (
       <div className={wrapperClassname}>
         <CategoryContent />
@@ -85,7 +79,7 @@ function Category({ category, classes }: CategoryProps) {
 
   return (
     <Link
-      to={data?.category.href}
+      to={data?.category.href ?? undefined}
       className={`${styles.categoryContainerLink} ${wrapperClassname}`}
     >
       <CategoryContent />
@@ -93,4 +87,4 @@ function Category({ category, classes }: CategoryProps) {
   )
 }
 
-export default Category
+export default React.memo(Category)

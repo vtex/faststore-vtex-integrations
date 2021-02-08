@@ -70,7 +70,7 @@
             "title": "Category",
             "type": "object",
             "properties": {
-              "image": {
+              "categoryImage": {
                 "title": "Featured product image",
                 "description": "Please use a PNG image with a transparent background",
                 "type": "string",
@@ -78,7 +78,7 @@
                   "ui:widget": "image-uploader"
                 }
               },
-              "category": {
+              "categoryId": {
                 "title": "Category ID",
                 "type": "string"
               }
