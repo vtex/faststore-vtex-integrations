@@ -38,7 +38,9 @@ function Category({ category, classes }: CategoryProps) {
 
   const CategoryContent = () => (
     <>
-      <div className={styles.imageWrapper}>
+      <div
+        className={`${styles.imageWrapper} flex items-center justify-center`}
+      >
         <Image
           key={category.categoryImage}
           src={category.categoryImage}

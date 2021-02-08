@@ -19,6 +19,7 @@
 
 .imageWrapper {
   height: 80px;
+  width: 80px;
 }
 
 @media (max-width: 40em) {
