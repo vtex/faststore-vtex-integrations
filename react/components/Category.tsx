@@ -38,13 +38,15 @@ function Category({ category, classes }: CategoryProps) {
 
   const CategoryContent = () => (
     <>
-      <Image
-        key={category.categoryId}
-        src={category.categoryImage ?? ''}
-        width={80}
-        height={80}
-        classes={classes}
-      />
+      <div className={styles.imageWrapper}>
+        <Image
+          key={category.categoryImage}
+          src={category.categoryImage}
+          maxWidth={80}
+          maxHeight={80}
+          classes={classes}
+        />
+      </div>
       {loading ? (
         <ContentLoader
           width={120}
@@ -67,7 +69,7 @@ function Category({ category, classes }: CategoryProps) {
     </>
   )
 
-  const wrapperClassname = `${styles.categoryContainer} flex flex-column items-center justify-center pv6 pv7-ns w-100 h-100`
+  const wrapperClassname = `${styles.categoryContainer} flex flex-column items-center pv6 pv7-ns ph5 w-100 h-100`
 
   if (loading) {
     return (

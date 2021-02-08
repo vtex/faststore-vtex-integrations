@@ -17,6 +17,10 @@
   font-size: 1.125em;
 }
 
+.imageWrapper {
+  height: 80px;
+}
+
 @media (max-width: 40em) {
   .categoryName {
     font-size: 1em;
