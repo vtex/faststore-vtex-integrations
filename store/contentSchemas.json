@@ -86,6 +86,33 @@
           }
         }
       }
+    },
+    "Banner": {
+      "title": "Banner",
+      "description": "Banner with a background image, a title and a link",
+      "type": "object",
+      "properties": {
+        "image": {
+          "title": " ",
+          "type": "string",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label for link",
+          "type": "string",
+          "default": "Shop now"
+        },
+        "url": {
+          "title": "URL address for link",
+          "type": "string"
+        }
+      }
     }
   }
 }

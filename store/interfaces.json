@@ -22,5 +22,11 @@
     "content": {
       "$ref": "app:storeframework.store-theme#/definitions/ShopByCategory"
     }
+  },
+  "section-banner": {
+    "component": "Banner",
+    "content": {
+      "$ref": "app:storeframework.store-theme#/definitions/Banner"
+    }
   }
 }
