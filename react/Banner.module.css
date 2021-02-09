@@ -19,7 +19,7 @@
   font-weight: 500;
   line-height: 48px;
 
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .button {
@@ -27,7 +27,6 @@
   border-radius: 4px;
   width: fit-content;
 
-  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -35,10 +34,11 @@
 
   text-align: center;
   letter-spacing: 0.02em;
+  color: #0067c7;
 }
 
-.button > a {
-  color: #0067c7;
+.button:hover {
+  color: #05529c
 }
 
 @media screen and (min-width: 40em) {
@@ -49,6 +49,10 @@
   .image {
     height: 256px;
     max-height: 256px;
+  }
+
+  .title {
+    margin-bottom: 20px;
   }
 
   .button {
