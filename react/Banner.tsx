@@ -13,14 +13,17 @@ export interface Props {
 
 function Banner(props: Props) {
   const { url, label, title, image } = props
-  const imageSrcs = useImageSources({ src: image })
+  const imageSrcs = useImageSources({
+    src: image,
+    breakPoints: [640, 1024, 1280, 1664],
+  })
 
   return (
     <div className={`relative w-100 ${styles.bannerContainer}`}>
       <picture>
         <source
           media="(min-width: 40em)"
-          srcSet={`${imageSrcs['640']}, ${imageSrcs['1024']}, ${imageSrcs['1280']}, ${imageSrcs['1664']}`}
+          srcSet={`${imageSrcs[640]}, ${imageSrcs[1024]}, ${imageSrcs[1280]}, ${imageSrcs[1664]}`}
         />
         <img className={`w-100 ${styles.image}`} alt={title} src={image} />
       </picture>

@@ -1,63 +1,41 @@
 import { useState } from 'react'
 
-interface ImageSourcesSettings<T = number[]> {
+interface ImageSourcesSettings<T extends string | number> {
   src: string
-  breakPoints?: T
+  breakPoints: T[]
 }
 
-type ImageDefaultBreakpoints = '320' | '640' | '1024' | '1280' | '1664'
+type ArrayToUnion<T extends Array<string | number>> = T[number]
 
-type ArrayToUnion<T extends any[] = number[]> = T[number]
-
-type BreakPointsKeys = ImageDefaultBreakpoints | ArrayToUnion<any[]>
-
-type BreakPoints = {
-  [K in BreakPointsKeys]: string
+type BreakPoints<T extends Array<string | number>> = {
+  [K in ArrayToUnion<T>]: string
 }
 
-const formatImgSrcUrl = ({ src, val }: { src: string; val: number }) =>
+const formatImgSrcUrl = ({ src, val }: { src: string; val: number | string }) =>
   `${src}?width=${val}&aspect=true ${val}w`
 
-function initImageSources({
+function initImageSources<T extends string | number>({
   src,
   breakPoints,
-}: {
-  src: ImageSourcesSettings['src']
-  breakPoints: BreakPointsKeys[]
-}): BreakPoints {
-  const defaultSources: any = {
-    '320': formatImgSrcUrl({ src, val: 320 }),
-    '640': formatImgSrcUrl({ src, val: 640 }),
-    '1024': formatImgSrcUrl({ src, val: 1024 }),
-    '1280': formatImgSrcUrl({ src, val: 1280 }),
-    '1664': formatImgSrcUrl({ src, val: 1664 }),
-  }
+}: ImageSourcesSettings<T>) {
+  const breakPointsResult = {} as BreakPoints<T[]>
 
   breakPoints.forEach((val) => {
-    defaultSources[val as BreakPointsKeys] = formatImgSrcUrl({
+    breakPointsResult[val] = formatImgSrcUrl({
       val,
       src,
     })
   })
 
-  return defaultSources
+  return breakPointsResult
 }
 
-function useImageSources<T extends number[]>({
+function useImageSources<T extends string | number>({
   src,
   breakPoints,
 }: ImageSourcesSettings<T>) {
-  const allBreakPoints: BreakPointsKeys[] = ((breakPoints ??
-    []) as BreakPointsKeys[]).concat([
-    '320',
-    '640',
-    '1024',
-    '1280',
-    '1664',
-  ] as ImageDefaultBreakpoints[])
-
-  const [imageSources] = useState<BreakPoints>(
-    initImageSources({ src, breakPoints: allBreakPoints })
+  const [imageSources] = useState<BreakPoints<T[]>>(
+    initImageSources({ src, breakPoints })
   )
 
   return imageSources
