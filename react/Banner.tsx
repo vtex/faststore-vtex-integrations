@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react'
 import { Link, useRuntime } from 'vtex.render-runtime'
+import { Image } from 'vtex.store-image'
+import { useCustomClasses } from 'vtex.css-handles'
 
 import Container from './components/Container'
 import { generateImageSources } from './utils/ImageSourcesGenerator'
@@ -20,6 +22,10 @@ function Banner(props: Props) {
     deviceInfo: { type },
   } = useRuntime()
 
+  const carouselClasses = useCustomClasses(() => ({
+    imageElement: `w-100 ${styles.image}`,
+  }))
+
   const isPhone = type === 'phone'
   const imageSrc = isPhone ? mobileImage : image
 
@@ -38,8 +44,8 @@ function Banner(props: Props) {
             srcSet={`${imageSrcs[1664]}, ${imageSrcs[1280]}, ${imageSrcs[1024]}`}
           />
 
-          <img
-            className={`w-100 ${styles.image}`}
+          <Image
+            classes={carouselClasses}
             alt={alt}
             src={imageSrc}
             height={isPhone ? 160 : 256}
