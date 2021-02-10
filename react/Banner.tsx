@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Link, useRuntime } from 'vtex.render-runtime'
 
 import Container from './components/Container'
+import { generateImageSources } from './utils/ImageSourcesGenerator'
 import styles from './Banner.module.css'
-import useImageSources from './components/useImageSources'
+
+const breakPoints = [1024, 1280, 1664]
 
 export interface Props {
   image: string
@@ -11,8 +13,6 @@ export interface Props {
   alt: string
   url: string
 }
-
-const breakPoints = [1024, 1280, 1664]
 
 function Banner(props: Props) {
   const { alt, image, mobileImage, url } = props
@@ -23,10 +23,11 @@ function Banner(props: Props) {
   const isPhone = type === 'phone'
   const imageSrc = isPhone ? mobileImage : image
 
-  const imageSrcs = useImageSources({
-    src: imageSrc,
-    breakPoints,
-  })
+  const imageSrcs = useMemo(
+    () =>
+      generateImageSources({ src: imageSrc, breakPointsArray: breakPoints }),
+    [imageSrc]
+  )
 
   return (
     <Container className={`w-100 ${styles.container}`}>
