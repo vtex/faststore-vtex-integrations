@@ -12,7 +12,7 @@ export interface Props {
   url: string
 }
 
-const breakPoints = [640, 1024, 1280, 1664]
+const breakPoints = [1024, 1280, 1664]
 
 function Banner(props: Props) {
   const { alt, image, mobileImage, url } = props
@@ -33,13 +33,10 @@ function Banner(props: Props) {
       <Link to={url}>
         <picture>
           <source
-            media="(min-width: 64em)"
+            media="(min-width: 40em)"
             srcSet={`${imageSrcs[1664]}, ${imageSrcs[1280]}, ${imageSrcs[1024]}`}
           />
-          <source
-            media="(min-width: 40em)"
-            srcSet={`${mobileImage}?width=640&aspect=true 640w`}
-          />
+
           <img
             className={`w-100 ${styles.image}`}
             alt={alt}
