@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRuntime } from 'vtex.render-runtime'
+import { Link, useRuntime } from 'vtex.render-runtime'
 
 import Container from './components/Container'
 import styles from './Banner.module.css'
@@ -7,46 +7,48 @@ import useImageSources from './components/useImageSources'
 
 export interface Props {
   image: string
-  label: string
-  title: string
+  mobileImage: string
+  alt: string
   url: string
 }
 
+const breakPoints = [640, 1024, 1280, 1664]
+
 function Banner(props: Props) {
-  const { url, label, title, image } = props
-  const { deviceInfo } = useRuntime()
+  const { alt, image, mobileImage, url } = props
+  const {
+    deviceInfo: { type },
+  } = useRuntime()
+
+  const isPhone = type === 'phone'
+  const imageSrc = isPhone ? mobileImage : image
+
   const imageSrcs = useImageSources({
-    src: image,
-    breakPoints: [640, 1024, 1280, 1664],
+    src: imageSrc,
+    breakPoints,
   })
 
   return (
-    <div className={`relative w-100 ${styles.bannerContainer}`}>
-      <picture>
-        <source
-          media="(min-width: 40em)"
-          srcSet={`${imageSrcs[640]}, ${imageSrcs[1024]}, ${imageSrcs[1280]}, ${imageSrcs[1664]}`}
-        />
-        <img
-          className={`w-100 ${styles.image}`}
-          alt={title}
-          src={image}
-          height={deviceInfo.isMobile ? 160 : 256}
-        />
-      </picture>
-
-      <div className={`absolute top-0 h-100 w-100 ${styles.background}`} />
-
-      <Container className="absolute top-0 h-100 w-100 flex flex-column justify-center">
-        <div className={styles.title}>{title}</div>
-        <a
-          href={url}
-          className={`link t-action db bn pointer ph4 pt3 pb3 ph7-m pt4-m pb4-m ${styles.button}`}
-        >
-          {label}
-        </a>
-      </Container>
-    </div>
+    <Container className={`w-100 ${styles.container}`}>
+      <Link to={url}>
+        <picture>
+          <source
+            media="(min-width: 64em)"
+            srcSet={`${imageSrcs[1664]}, ${imageSrcs[1280]}, ${imageSrcs[1024]}`}
+          />
+          <source
+            media="(min-width: 40em)"
+            srcSet={`${mobileImage}?width=640&aspect=true 640w`}
+          />
+          <img
+            className={`w-100 ${styles.image}`}
+            alt={alt}
+            src={imageSrc}
+            height={isPhone ? 160 : 256}
+          />
+        </picture>
+      </Link>
+    </Container>
   )
 }
 

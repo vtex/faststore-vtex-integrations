@@ -93,20 +93,23 @@
       "type": "object",
       "properties": {
         "image": {
-          "title": " ",
+          "title": "Mobile image",
           "type": "string",
           "widget": {
             "ui:widget": "image-uploader"
           }
         },
-        "title": {
-          "title": "Title",
-          "type": "string"
-        },
-        "label": {
-          "title": "Label for link",
+        "mobileImage": {
+          "title": "Desktop image",
           "type": "string",
-          "default": "Shop now"
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "alt": {
+          "title": "Alt description",
+          "description": "Required for acessibility and SEO",
+          "type": "string"
         },
         "url": {
           "title": "URL address for link",
