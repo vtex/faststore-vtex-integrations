@@ -93,14 +93,14 @@
       "type": "object",
       "properties": {
         "image": {
-          "title": "Mobile image",
+          "title": "Desktop image",
           "type": "string",
           "widget": {
             "ui:widget": "image-uploader"
           }
         },
         "mobileImage": {
-          "title": "Desktop image",
+          "title": "Mobile image",
           "type": "string",
           "widget": {
             "ui:widget": "image-uploader"

@@ -23,7 +23,7 @@ function Banner(props: Props) {
   } = useRuntime()
 
   const carouselClasses = useCustomClasses(() => ({
-    imageElement: `w-100 ${styles.image}`,
+    imageElement: styles.image,
   }))
 
   const isPhone = type === 'phone'
@@ -36,8 +36,8 @@ function Banner(props: Props) {
   )
 
   return (
-    <Container className={`w-100 ${styles.container}`}>
-      <Link to={url}>
+    <Container className="w-100 pv6 pv8-m">
+      <Link to={url} className={`flex justify-center ${styles.link}`}>
         <picture>
           <source
             media="(min-width: 40em)"
@@ -48,7 +48,7 @@ function Banner(props: Props) {
             classes={carouselClasses}
             alt={alt}
             src={imageSrc}
-            height={isPhone ? 160 : 256}
+            maxHeight={isPhone ? 160 : 256}
           />
         </picture>
       </Link>
