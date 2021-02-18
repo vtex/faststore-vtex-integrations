@@ -28,5 +28,11 @@
     "content": {
       "$ref": "app:storeframework.store-theme#/definitions/Banner"
     }
+  },
+  "section-product-grid": {
+    "component": "ProductGrid",
+    "content": {
+      "$ref": "app:storeframework.store-theme#/definitions/ProductGrid"
+    }
   }
 }

@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.container {
+  background-color: #F3F9FF;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 60em) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 40em) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
