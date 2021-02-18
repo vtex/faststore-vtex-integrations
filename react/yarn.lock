@@ -5060,6 +5060,10 @@ verror@1.10.0:
   version "0.1.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.responsive-layout@0.1.2/public/@types/vtex.responsive-layout#e33f23a78afb3ffb8ff8aedc77b1ca6728583e72"
 
+"vtex.reviews-and-ratings@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.reviews-and-ratings@2.7.2/public/@types/vtex.reviews-and-ratings":
+  version "2.7.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.reviews-and-ratings@2.7.2/public/@types/vtex.reviews-and-ratings#b1f46c156b6773d8762bf7d545bb5cc9755706e6"
+
 "vtex.rich-text@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.12.0/public/@types/vtex.rich-text":
   version "0.12.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.12.0/public/@types/vtex.rich-text#56d0486b024aec40ccce96ee1affc03d0119d40f"
@@ -5116,9 +5120,9 @@ verror@1.10.0:
   version "0.18.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-icons@0.18.0/public/@types/vtex.store-icons#0ee94d549aa283ce3a13ab987c13eac4fdfd1bba"
 
-"vtex.store-image@https://icaroproductgrid--storeframework.myvtex.com/_v/private/typings/linked/v1/vtex.store-image@0.8.0+build1613582241/public/@types/vtex.store-image":
-  version "0.8.0"
-  resolved "https://icaroproductgrid--storeframework.myvtex.com/_v/private/typings/linked/v1/vtex.store-image@0.8.0+build1613582241/public/@types/vtex.store-image#fa7ebf996dadf0a94c8b6529f7fde3c78a687de6"
+"vtex.store-image@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-image@0.9.1/public/@types/vtex.store-image":
+  version "0.9.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-image@0.9.1/public/@types/vtex.store-image#8039653f6e3651a09befb4cfccc467107de73cc4"
 
 "vtex.store-link@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-link@0.7.3/public/@types/vtex.store-link":
   version "0.7.3"
