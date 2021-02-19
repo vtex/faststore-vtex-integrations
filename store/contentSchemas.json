@@ -86,6 +86,36 @@
           }
         }
       }
+    },
+    "Banner": {
+      "title": "Banner",
+      "description": "Banner with a background image, a title and a link",
+      "type": "object",
+      "properties": {
+        "image": {
+          "title": "Desktop image",
+          "type": "string",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "mobileImage": {
+          "title": "Mobile image",
+          "type": "string",
+          "widget": {
+            "ui:widget": "image-uploader"
+          }
+        },
+        "alt": {
+          "title": "Alt description",
+          "description": "Required for acessibility and SEO",
+          "type": "string"
+        },
+        "url": {
+          "title": "URL address for link",
+          "type": "string"
+        }
+      }
     }
   }
 }
