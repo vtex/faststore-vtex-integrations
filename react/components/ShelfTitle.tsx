@@ -7,6 +7,7 @@ interface Props {
   showBorder?: boolean
   seeMoreText?: string
   seeMoreLink?: string
+  className?: HTMLDivElement['className']
 }
 
 function ShelfTitle({
@@ -14,15 +15,16 @@ function ShelfTitle({
   showBorder = true,
   seeMoreText = 'See more',
   seeMoreLink = '/',
+  className = '',
 }: Props) {
   return (
     <>
       <div
-        className={`flex justify-between items-baseline pv6 mb6 ${
-          showBorder ? 'bb b--muted-4' : ''
-        }`}
+        className={`flex justify-between items-baseline${
+          showBorder ? ' pb5 bb b--muted-4' : ''
+        } ${className}`}
       >
-        <h3 className="t-heading-3 c-on-base mv0 fw5">{title}</h3>
+        <h3 className="t-heading-4 c-on-base mv0">{title}</h3>
 
         <Link
           to={seeMoreLink}

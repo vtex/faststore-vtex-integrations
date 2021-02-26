@@ -6,7 +6,6 @@
 
 .container {
   background-color: #F3F9FF;
-  padding-bottom: 2.5rem;
 }
 
 @media (max-width: 60em) {
@@ -19,5 +18,10 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }

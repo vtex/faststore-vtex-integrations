@@ -42,8 +42,8 @@ function ProductGrid({
   }
 
   return (
-    <Container className={styles.container}>
-      <ShelfTitle title={title ?? ''} showBorder={false} />
+    <Container className={`${styles.container} pv8-ns`}>
+      <ShelfTitle title={title ?? ''} showBorder={false} className="pb5" />
       <ProductSummaryList {...productSummaryListProps}>
         <div className={styles.grid}>
           <ListRenderer />
