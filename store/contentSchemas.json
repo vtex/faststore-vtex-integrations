@@ -116,6 +116,42 @@
           "type": "string"
         }
       }
+    },
+    "HighlightsWithIcons": {
+      "title": "Highlights with Icons",
+      "description": "Highlights with an icon, a title and a description",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "highlights": {
+          "title": "Highlights",
+          "type": "array",
+          "items": {
+            "title": "Highlight",
+            "type": "object",
+            "properties": {
+              "icon": {
+                "title": "Icon",
+                "type": "string",
+                "enum": ["store", "delivery", "price", "returns"],
+                "enumNames": ["Store", "Delivery", "Price", "Returns"],
+                "default": "store"
+              },
+              "title": {
+                "title": "Title",
+                "type": "string"
+              },
+              "subtitle": {
+                "title": "Subtitle",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

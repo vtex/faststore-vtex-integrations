@@ -1,0 +1,30 @@
+.card {
+  padding-bottom: 44px;
+  height: 189px;
+}
+
+.icon {
+  margin-bottom: 14px;
+  margin-top: 31px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.subtitle {
+  color: #717786;
+  font-size: 14px
+}
+
+@media screen and (min-width: 40em) {
+  .card {
+    padding-bottom: 24px;
+    height: 187px;
+  }
+
+  .icon {
+    margin-bottom: 20px;
+    margin-top: 58px;
+  }
+}

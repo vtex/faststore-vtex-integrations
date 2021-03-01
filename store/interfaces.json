@@ -28,5 +28,11 @@
     "content": {
       "$ref": "app:storeframework.store-theme#/definitions/Banner"
     }
+  },
+  "section-highlights": {
+    "component": "Highlights",
+    "content": {
+      "$ref": "app:storeframework.store-theme#/definitions/HighlightsWithIcons"
+    }
   }
 }
