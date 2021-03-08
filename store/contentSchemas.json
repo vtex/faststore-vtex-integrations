@@ -116,6 +116,58 @@
           "type": "string"
         }
       }
+    },
+    "ProductGrid": {
+      "title": "Product Grid",
+      "description": "Products from a collection or the best selling ones",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "maxNumberItems": {
+          "title": "Maximum number of items",
+          "type": "number",
+          "default": "6"
+        },
+        "products": {
+          "title": "Products",
+          "properties": {
+            "filterOption": {
+              "title": "Display",
+              "type": "string",
+              "enum": ["OrderByTopSaleDESC", "collection"],
+              "enumNames": [
+                "Show the best selling products",
+                "Display products from an existing collection"
+              ],
+              "default": "OrderByTopSaleDESC"
+            }
+          },
+          "required": ["filterOption"],
+          "dependencies": {
+            "filterOption": {
+              "oneOf": [
+                {
+                  "title": "Products",
+                  "properties": {
+                    "filterOption": {
+                      "enum": ["collection"]
+                    },
+                    "collection": {
+                      "title": "Collection ID",
+                      "type": "string"
+                    }
+                  },
+                  "required": ["collection"]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "required": ["products"]
     }
   }
 }

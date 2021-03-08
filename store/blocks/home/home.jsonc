@@ -4,8 +4,9 @@
       "section-main-banner-carousel",
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      "__fold__.experimentalLazyAssets",
+      // "__fold__.experimentalLazyAssets",
       "flex-layout.row#deals",
+      "section-product-grid#home",
       "section-shop-by-category#home",
       "section-shelf",
       "rich-text#shelf-title",
@@ -15,6 +16,14 @@
       "rich-text#link",
       "section-newsletter"
     ]
+  },
+  "section-product-grid#home": {
+    "props": {
+      "title": "What's trending",
+      "products": {
+        "filterOption": "OrderByTopSaleDESC"
+      }
+    }
   },
   "section-shop-by-category#home": {
     "props": {

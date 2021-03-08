@@ -33,7 +33,7 @@ function ProductShelf({ title, collection }: Props) {
 
   return (
     <Container>
-      <ShelfTitle title={title} seeMoreLink="/" />
+      <ShelfTitle title={title} seeMoreLink="/" className="mv6" />
 
       <ProductSummaryList
         ProductSummary={ProductSummary}
