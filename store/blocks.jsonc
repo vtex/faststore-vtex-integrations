@@ -9,24 +9,34 @@
  */
 {
   "store.orderplaced": {
+    // Replaces header and footer.
     "parent": {
-      "header": "header#empty",
+      "header": "header#simple",
       "footer": "footer#empty"
     },
     "blocks": ["order-placed"]
   },
 
-  "header#empty": {
+  "logo#simple-header": {
+    "props": {
+      "title": "Logo",
+      "href": "https://vtexfaststore.com/",
+      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
+      "width": "180"
+    }
+  },
+
+  "header#simple": {
     "blocks": [
-      "header-layout.desktop#empty",
-      "header-layout.mobile#empty"
+      "header-layout.desktop#simple",
+      "header-layout.mobile#simple"
     ]
   },
-  "header-layout.desktop#empty": {
-    "children": []
+  "header-layout.desktop#simple": {
+    "children": ["logo#simple-header"]
   },
-  "header-layout.mobile#empty": {
-    "children": []
+  "header-layout.mobile#simple": {
+    "children": ["logo#simple-header"]
   },
 
   "footer#empty": {
@@ -43,8 +53,11 @@
   },
 
   "store.account": {
+    // Replaces header and footer.
     "blocks": ["my-account"],
     "parent": {
+      "header": "header#simple",
+      "footer": "footer#empty",
       "challenge": "challenge.profile"
     }
   },
