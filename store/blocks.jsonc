@@ -22,7 +22,8 @@
       "title": "Logo",
       "href": "https://vtexfaststore.com/",
       "url": "assets/faststore-logo.png",
-      "width": "180"
+      "width": "180",
+      "blockClass": "simple-header"
     }
   },
 
