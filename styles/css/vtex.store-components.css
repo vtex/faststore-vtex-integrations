@@ -38,6 +38,11 @@
   margin: 1rem 0;
 }
 
+.logoLink--simple-header {
+  width: 90%;
+  margin: 1rem auto 0;
+}
+
 @media only screen and (min-width: 640px) {
   .label {
     font-size: 40px;
@@ -54,6 +59,10 @@
   .imageElement--storePrint {
     margin-bottom: 0px;
     max-height: 600px;
+  }
+
+  .logoLink--simple-header {
+    width: 80%;
   }
 }
 

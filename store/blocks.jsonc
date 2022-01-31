@@ -9,12 +9,56 @@
  */
 {
   "store.orderplaced": {
+    // Replaces header and footer.
+    "parent": {
+      "header": "header#simple",
+      "footer": "footer#empty"
+    },
     "blocks": ["order-placed"]
   },
 
+  "logo#simple-header": {
+    "props": {
+      "title": "Logo",
+      "href": "https://vtexfaststore.com/",
+      "url": "assets/faststore-logo.png",
+      "width": "180",
+      "blockClass": "simple-header"
+    }
+  },
+
+  "header#simple": {
+    "blocks": [
+      "header-layout.desktop#simple",
+      "header-layout.mobile#simple"
+    ]
+  },
+  "header-layout.desktop#simple": {
+    "children": ["logo#simple-header"]
+  },
+  "header-layout.mobile#simple": {
+    "children": ["logo#simple-header"]
+  },
+
+  "footer#empty": {
+    "blocks": [
+      "footer-layout.desktop#empty",
+      "footer-layout.mobile#empty"
+    ]
+  },
+  "footer-layout.desktop#empty": {
+    "children": []
+  },
+  "footer-layout.mobile#empty": {
+    "children": []
+  },
+
   "store.account": {
+    // Replaces header and footer.
     "blocks": ["my-account"],
     "parent": {
+      "header": "header#simple",
+      "footer": "footer#empty",
       "challenge": "challenge.profile"
     }
   },
