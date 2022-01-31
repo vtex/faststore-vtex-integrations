@@ -21,7 +21,7 @@
     "props": {
       "title": "Logo",
       "href": "https://vtexfaststore.com/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
+      "url": "assets/faststore-logo.png",
       "width": "180"
     }
   },
