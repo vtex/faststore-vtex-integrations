@@ -1,6 +1,0 @@
-query($id: Int) {
-  category(id: $id) @context(provider: "vtex.store-graphql") {
-    name
-    href
-  }
-}
