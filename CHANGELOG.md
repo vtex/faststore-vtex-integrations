@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- How the header looks and simplified its content.
+- The footer is now empty by default.
+- All `.jsonc` files are now under `store/blocks`.
+- The home page is now empty by default (apart from a header and the empty footer).
+
+### Removed
+- All React components.
+- All interface definitions.
+- `store/contentSchemas.json` file.
+- All custom routes defined in `store/routes.json`.
+- All CSS files apart from `vtex.flex-layout.css` and `vtex.store-header.css`.
+- Files for Roboto font.
+- `sitemap` and `react` builder dependencies.
+- Dependencies on multiple VTEX IO apps (see commit [94d23da](https://github.com/vtex/storeframework.store-theme/commit/94d23dab38c452760a6a91a4250095170deb4e2a)).
+- All block definitions for `store.search`, `store.custom` and `store.product` pages.
 
 ## [1.4.0] - 2022-01-31
 ### Removed
