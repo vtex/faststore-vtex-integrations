@@ -28,9 +28,7 @@
     "vtex.rich-text": "0.x",
     "vtex.sticky-layout": "0.x",
     "vtex.order-placed": "2.x",
-    "vtex.responsive-layout": "0.x",
-    "vtex.product-context": "0.x",
-    "vtex.store-graphql": "2.x"
+    "vtex.responsive-layout": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
