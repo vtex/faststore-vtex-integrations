@@ -1,4 +1,7 @@
 {
+  "store.orderplaced": {
+    "blocks": ["order-placed"]
+  },
   "order-placed": {
     "blocks": ["op-header", "op-order"]
   },
