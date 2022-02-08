@@ -1,10 +1,10 @@
 # FastStore Integrations Theme
 
-This is a minimal store theme to help the setup process of integrating your FastStore store with with VTEX modules that are still powered by Render and the Store Framework.
+This is a minimal VTEX IO theme to help you integrate your **[FastStore project](faststore.dev)** with VTEX solutions still powered by VTEX IO and Store Framework, such as OrderPlaced and MyAccount.
 
-After installing this theme in a VTEX account, you should have:
+After installing this theme in a VTEX account, you will have:
 
-- A minimal header consisting of a logo with a link associated to it.
+- A minimal header consisting of a logo with a link associated with it.
 - A MyAccount page.
 - A Login page.
 - An OrderPlaced page.
