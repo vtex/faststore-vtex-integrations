@@ -1,65 +1,112 @@
-# Store theme
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-Our boilerplate theme to create stores in the VTEX IO platform.
+# FastStore Integrations Theme
 
-## Preview
-![store-theme-default](https://user-images.githubusercontent.com/1354492/63937047-e8d81c80-ca37-11e9-86fc-61e88847bbfb.png)
+This is a minimal store theme to help the setup process of integrating your FastStore store with with VTEX modules that are still powered by Render and the Store Framework.
 
-## Tutorial
-To understand how things work check our tutorial [Build a store using VTEX IO](https://vtex.io/docs/getting-started/build-stores-with-store-framework/1/)
+After installing this theme in a VTEX account, you should have:
 
-## Dependencies
-All store components that you see on this document are open source too. Production ready, you can found those apps in this GitHub organization.
+- A minimal header consisting of a logo with a link associated to it.
+- A MyAccount page.
+- A Login page.
+- An OrderPlaced page.
+- A minimal footer consisting of VTEX's logo and a "Powered By" tagline.
 
-Store framework is the baseline to create any store using _VTEX IO Web Framework_.
-- [Store](https://github.com/vtex-apps/store/blob/master/README.md)
+## How to test this theme
 
-Store GraphQL is a middleware to access all VTEX APIs.
-- [Store GraphQL](https://github.com/vtex-apps/store-graphql/blob/master/docs/README.md)
+1. Make sure you're logged in a VTEX account by running the following command in a terminal window:
 
-### Store Component Apps
-- [Header](https://github.com/vtex-apps/store-header/blob/master/docs/README.md)
-- [Footer](https://github.com/vtex-apps/store-footer/blob/master/docs/README.md)
-- [Slider Layout](https://github.com/vtex-apps/slider-layout/blob/master/docs/README.md)
-- [Shelf](https://github.com/vtex-apps/shelf/blob/master/docs/README.md)
-- [Telemarketing](https://github.com/vtex-apps/telemarketing/blob/master/docs/README.md)
-- [Menu](https://github.com/vtex-apps/menu/blob/master/docs/README.md)
-- [Login](https://github.com/vtex-apps/login/blob/master/docs/README.md)
-- [Minicart](https://github.com/vtex-apps/minicart/blob/master/docs/README.md)
-- [Category Menu](https://github.com/vtex-apps/category-menu/blob/master/docs/README.md)
-- [Product Summary](https://github.com/vtex-apps/product-summary/blob/master/docs/README.md)
-- [Breadcrumb](https://github.com/vtex-apps/breadcrumb/blob/master/docs/README.md)
-- [Search Result](https://github.com/vtex-apps/search-result/blob/master/docs/README.md)
-- [Product Details](https://github.com/vtex-apps/product-details/blob/master/docs/README.md)
-- [Store Components](https://github.com/vtex-apps/store-components/blob/master/docs/README.md)
-- [Order Placed](https://github.com/vtex-apps/order-placed/blob/master/docs/README.md)
+```bash
+$ vtex whoami
+```
 
-### Store Pixel Apps
+2. Create a new development workspace to test your changes in an isolated environment (replace `workspace-name` with the name you want to give your new workspace):
 
- - [Facebook Pixel](https://github.com/vtex-apps/facebook-pixel/blob/master/docs/README.md)
- - [Google Tag Manager](https://github.com/vtex-apps/google-tag-manager/blob/master/docs/README.md)
+```bash
+$ vtex use <workspace-name>
+```
 
-## Contributing
+3. Install this theme to see how it would affect your current store:
 
-Check it out [how to contribute](https://github.com/vtex-apps/awesome-io#contributing) with this project.
+```bash
+$ vtex install storeframework.store-theme
+```
 
-## Contributors ✨
+## Making changes
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+You will likely need to change a few aspects of this theme to customize and actually use it in production, such as the store's logo. To do so, follow these steps:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="http://www.hugoccosta.com"><img src="https://avatars2.githubusercontent.com/u/20212776?v=4" width="100px;" alt=""/><br /><sub><b>Hugo Costa</b></sub></a><br /><a href="https://github.com/vtex-apps/store-theme/commits?author=hugocostadev" title="Documentation">📖</a></td>
-  </tr>
-</table>
+1. Clone this repository to have a local copy in your machine and make sure to initialize a new git repo, since you'll be creating your own version of this repository. Run the following command, replacing `<local-repo-name>` with any name you like:
 
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+```bash
+npx degit vtex/faststore-vtex-integrations <local-repo-name>
+```
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This command will create a local copy of this repository, but will **not** contain a `.git` folder. To make it a new git repository, run `git init`.
+
+2. Make sure you're logged in a VTEX account by running the following command in a terminal window:
+
+```bash
+$ vtex whoami
+```
+
+3. Create a new development workspace to test your changes in an isolated environment (replace `workspace-name` with the name you want to give your new workspace):
+
+```bash
+$ vtex use <workspace-name>
+```
+
+4. Change the `vendor` field in your theme's `manifest.json` file:
+
+```json
+{
+  "vendor": "<your-account-name>",
+}
+```
+
+5. Now any changes you make should be reflected in your workspace.
+
+## Updating the header
+
+1. Make sure you're logged in a VTEX account by running the following command in a terminal window:
+
+```bash
+$ vtex whoami
+```
+
+2. Create a new development workspace to test your changes in an isolated environment (replace `workspace-name` with the name you want to give your new workspace):
+
+```bash
+$ vtex use <workspace-name>
+```
+
+3. Add the logo image you want to use to the `assets` folder.
+
+4. Open the `store/blocks/header.jsonc` file, and change the following:
+
+```diff
+"logo#desktop": {
+  "props": {
+    "title": "Logo",
+-    "href": "https://vtexfaststore.com/",
++    "href": "<your-store-home-page>",
+-    "url": "assets/faststore-logo.png",
++    "url": "assets/<your-new-logo>",
+    "width": "180"
+  }
+},
+
+//...
+
+"logo#mobile": {
+  "props": {
+    "title": "Logo",
+-    "href": "https://vtexfaststore.com/",
++    "href": "<your-store-home-page>",
+-    "url": "assets/faststore-logo.png",
++    "url": "assets/<your-new-logo>",
+    "width": "90"
+  }
+}
+
+```
+
+5. If you want to change the header's styling, you can update both CSS files in the `styles` folder. For more guidance on how to customize the header or any other block in your theme, refer to our [documentation](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-using-css-handles-for-store-customization).
