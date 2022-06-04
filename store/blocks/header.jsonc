@@ -47,7 +47,7 @@
     "props": {
       "title": "Logo",
       "href": "https://www.vtexfaststore.com/",
-      "url": "assets/faststore-logo.png",
+      "url": "assets/logo.svg",
       "width": "180"
     }
   },
@@ -75,7 +75,7 @@
     "props": {
       "title": "Logo",
       "href": "https://www.vtexfaststore.com/",
-      "url": "assets/faststore-logo.png",
+      "url": "assets/logo.svg",
       "width": "90"
     }
   }
